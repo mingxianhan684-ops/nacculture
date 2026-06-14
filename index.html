@@ -4,37 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>North America Chinese Culture Foundation</title>
-
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,"Microsoft YaHei",sans-serif;color:#222;background:#faf7f0;line-height:1.6}
+body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f3ea;color:#222;line-height:1.6}
 a{text-decoration:none}
-header{position:sticky;top:0;z-index:10;background:#111;color:#fff;padding:18px 8%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:22px;font-weight:700}
+header{position:sticky;top:0;z-index:99;background:rgba(20,20,20,.95);color:white;padding:18px 8%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:bold}
 nav a{color:white;margin-left:22px;font-size:15px}
-.hero{min-height:88vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1800&q=80");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:80px 8%}
-.hero h1{font-size:54px;line-height:1.15;margin-bottom:20px}
-.hero h2{font-size:30px;margin-bottom:20px}
-.hero p{font-size:20px;max-width:850px;margin:auto}
-.btn{display:inline-block;margin-top:30px;background:#c89b2c;color:white;padding:15px 34px;border-radius:40px;font-weight:bold}
-section{padding:70px 8%}
-.section-title{text-align:center;margin-bottom:45px}
-.section-title h2{font-size:34px;color:#6b1f1f}
-.section-title p{font-size:18px;color:#555}
+.hero{min-height:92vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=1800&q=80");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;color:white;padding:80px 8%}
+.hero h1{font-size:56px;line-height:1.15;margin-bottom:18px}
+.hero h2{font-size:32px;margin-bottom:20px}
+.hero p{font-size:20px;max-width:850px;margin:8px auto}
+.btn{display:inline-block;margin-top:28px;background:#c99a28;color:white;padding:15px 36px;border-radius:40px;font-weight:bold}
+section{padding:75px 8%}
+.title{text-align:center;margin-bottom:45px}
+.title h2{font-size:36px;color:#7a1f1f}
+.title p{font-size:18px;color:#666}
 .about{background:white;text-align:center}
-.about p{max-width:980px;margin:12px auto;font-size:18px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:26px}
-.card{background:white;border-radius:18px;padding:30px;box-shadow:0 6px 24px rgba(0,0,0,.08);transition:.3s}
-.card:hover{transform:translateY(-6px)}
-.card h3{color:#6b1f1f;font-size:22px;margin-bottom:14px}
-.card p{color:#555}
-.donate{background:#6b1f1f;color:white;text-align:center}
-.donate h2{font-size:36px;margin-bottom:15px}
-.donate p{font-size:20px;max-width:850px;margin:10px auto}
+.about p{max-width:1000px;margin:14px auto;font-size:18px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,.1)}
+.card img{width:100%;height:190px;object-fit:cover}
+.card div{padding:24px}
+.card h3{color:#7a1f1f;font-size:22px;margin-bottom:10px}
+.donate{background:linear-gradient(rgba(80,20,20,.9),rgba(80,20,20,.9)),url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1800&q=80");background-size:cover;background-position:center;color:white;text-align:center}
+.donate h2{font-size:38px}
+.donate p{font-size:20px;max-width:900px;margin:12px auto}
 .news{background:white}
-.news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px}
-.news-card{background:#faf7f0;border-radius:16px;padding:26px}
-.contact{text-align:center;background:#f2eadf}
+.newsbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.newsitem{background:#f8f3ea;border-radius:16px;padding:26px}
+.contact{text-align:center;background:#efe3d0}
 .contact p{font-size:18px;margin:8px}
 footer{background:#111;color:white;text-align:center;padding:35px 8%;font-size:14px}
 @media(max-width:760px){
@@ -63,109 +62,88 @@ nav a{margin:0 8px}
   <div>
     <h1>North America Chinese Culture Foundation</h1>
     <h2>北美中国文化基金会</h2>
-    <p>Promoting cultural exchange, education, compassion, and community service across North America.</p>
+    <p>Promoting culture, education, compassion, and community service across North America.</p>
     <p>传承文化，支持教育，关爱社区，传递善意。</p>
     <a class="btn" href="#donate">Donate Now / 立即捐赠</a>
   </div>
 </div>
 
 <section id="about" class="about">
-  <div class="section-title">
+  <div class="title">
     <h2>Our Mission / 我们的使命</h2>
     <p>Culture · Education · Charity · Community</p>
   </div>
   <p>
     North America Chinese Culture Foundation is organized exclusively for charitable,
-    educational, and cultural purposes. We are committed to promoting Chinese culture,
-    supporting youth education, caring for seniors, encouraging community service,
-    and building bridges of understanding between cultures.
+    educational, and cultural purposes. We promote cultural exchange, support youth education,
+    care for seniors, and serve families and communities in need.
   </p>
   <p>
-    北美中国文化基金会致力于慈善、教育与文化公益事业，推动中华文化传承、
-    青少年教育支持、老人关怀、社区公益服务，并促进北美多元文化之间的理解与交流。
+    北美中国文化基金会致力于慈善、教育与文化公益事业，推动中华文化传承、青少年教育支持、
+    老人关怀、社区公益服务，并促进北美多元文化之间的理解与交流。
   </p>
 </section>
 
 <section id="programs">
-  <div class="section-title">
+  <div class="title">
     <h2>Our Programs / 公益项目</h2>
     <p>Every act of kindness creates a brighter future.</p>
   </div>
 
   <div class="cards">
     <div class="card">
-      <h3>🎓 Education Support<br>助学基金</h3>
-      <p>Supporting students, scholarships, books, learning resources, and educational opportunities.</p>
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80">
+      <div><h3>Education Support<br>助学基金</h3><p>Supporting students, scholarships, books, learning resources, and educational opportunities.</p></div>
     </div>
 
     <div class="card">
-      <h3>👵 Senior Care<br>敬老关怀</h3>
-      <p>Providing care, respect, companionship, and community assistance for seniors in need.</p>
+      <img src="https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=900&q=80">
+      <div><h3>Senior Care<br>敬老关怀</h3><p>Providing care, respect, companionship, and community support for seniors in need.</p></div>
     </div>
 
     <div class="card">
-      <h3>📚 Chinese Culture Education<br>中华文化教育</h3>
-      <p>Promoting Chinese language, history, literature, art, traditions, and cultural heritage.</p>
+      <img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?auto=format&fit=crop&w=900&q=80">
+      <div><h3>Chinese Culture Education<br>中华文化教育</h3><p>Promoting Chinese language, history, literature, art, traditions, and cultural heritage.</p></div>
     </div>
 
     <div class="card">
-      <h3>🌏 Cultural Exchange<br>文化交流</h3>
-      <p>Building bridges between Chinese culture and North American communities through events and programs.</p>
+      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80">
+      <div><h3>Cultural Exchange<br>文化交流</h3><p>Building bridges between Chinese culture and North American communities through events and programs.</p></div>
     </div>
 
     <div class="card">
-      <h3>🐾 Pet Rescue Fund<br>宠物救助基金</h3>
-      <p>Supporting animal rescue, adoption awareness, and compassionate community care.</p>
+      <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=900&q=80">
+      <div><h3>Pet Rescue Fund<br>宠物救助基金</h3><p>Supporting animal rescue, adoption awareness, and compassionate community care.</p></div>
     </div>
 
     <div class="card">
-      <h3>🏥 Medical Assistance<br>医疗援助</h3>
-      <p>Helping families and individuals facing hardship caused by medical needs and emergencies.</p>
-    </div>
-
-    <div class="card">
-      <h3>🎨 Arts Development<br>艺术发展</h3>
-      <p>Supporting artists, exhibitions, performances, cultural publications, and creative education.</p>
-    </div>
-
-    <div class="card">
-      <h3>🤝 Community Service<br>社区公益</h3>
-      <p>Serving families, youth, seniors, and vulnerable groups through volunteer-driven programs.</p>
+      <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80">
+      <div><h3>Medical Assistance<br>医疗援助</h3><p>Helping families and individuals facing hardship caused by medical needs and emergencies.</p></div>
     </div>
   </div>
 </section>
 
 <section id="donate" class="donate">
   <h2>Support Our Work / 支持我们的公益事业</h2>
-  <p>Your donation helps preserve culture, support education, care for seniors, and serve the community.</p>
+  <p>Your kindness helps preserve culture, support education, care for seniors, and serve the community.</p>
   <p>您的每一份爱心，都将成为文化传承、教育支持与社区关怀的一束光。</p>
   <a class="btn" href="#">Donation Link Coming Soon / 捐款链接即将开放</a>
 </section>
 
 <section id="news" class="news">
-  <div class="section-title">
+  <div class="title">
     <h2>News & Updates / 最新动态</h2>
     <p>Foundation activities, community stories, and cultural events.</p>
   </div>
-
-  <div class="news-grid">
-    <div class="news-card">
-      <h3>Foundation Website Launched</h3>
-      <p>The official website of North America Chinese Culture Foundation is now online.</p>
-    </div>
-    <div class="news-card">
-      <h3>Community Charity Programs</h3>
-      <p>We are preparing education, senior care, cultural exchange, and community service programs.</p>
-    </div>
-    <div class="news-card">
-      <h3>Volunteer Opportunities</h3>
-      <p>We welcome volunteers, partners, donors, educators, artists, and community leaders.</p>
-    </div>
+  <div class="newsbox">
+    <div class="newsitem"><h3>Official Website Launched</h3><p>The official website of North America Chinese Culture Foundation is now online.</p></div>
+    <div class="newsitem"><h3>Charity Programs Preparing</h3><p>We are preparing education, senior care, cultural exchange, and community service programs.</p></div>
+    <div class="newsitem"><h3>Volunteers Welcome</h3><p>We welcome volunteers, partners, donors, educators, artists, and community leaders.</p></div>
   </div>
 </section>
 
 <section id="contact" class="contact">
-  <div class="section-title">
+  <div class="title">
     <h2>Contact Us / 联系我们</h2>
   </div>
   <p>Email: chinahanjing@126.com</p>
