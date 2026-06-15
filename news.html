@@ -3,86 +3,222 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>News | NAC Culture Foundation</title>
+<title>News | NACCF</title>
 <style>
-body{margin:0;font-family:Arial,"Microsoft YaHei",sans-serif;background:#f6f6f6;color:#222}
-header{background:#111;color:white;padding:25px;text-align:center}
-nav{background:#0055aa;padding:14px;text-align:center}
-nav a{color:white;text-decoration:none;margin:15px;font-weight:bold}
-.hero{background:linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),url("https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1600&q=80");background-size:cover;background-position:center;color:white;text-align:center;padding:110px 20px}
-.hero h1{font-size:52px;margin:0}
-.container{max-width:1100px;margin:auto;padding:45px 20px}
-.news{background:white;border-radius:14px;padding:28px;margin-bottom:25px;box-shadow:0 4px 14px rgba(0,0,0,.1)}
-.news h2{color:#003366}
-.date{color:#777;font-size:14px;margin-bottom:12px}
-footer{background:#111;color:white;text-align:center;padding:25px;margin-top:40px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.7}
+a{text-decoration:none;color:inherit}
+header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.9);padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;color:white}
+.logo img{width:56px;height:56px;border-radius:50%;background:white}
+.logo strong{display:block;font-size:24px;letter-spacing:1px}
+.logo span{display:block;font-size:12px;color:#ddd}
+nav a{color:white;margin-left:22px;font-size:14px;font-weight:bold}
+nav a:hover{color:#d4af37}
+
+.hero{min-height:72vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),url("hero-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 70px}
+.hero h1{font-size:64px;color:white;margin-bottom:15px}
+.hero h2{font-size:34px;color:#d4af37;margin-bottom:15px}
+.hero p{font-size:21px;color:white;max-width:850px;margin:auto}
+
+.section{padding:90px 8%}
+.title{text-align:center;margin-bottom:55px}
+.title h2{font-size:44px;color:#7a1f1f;margin-bottom:12px}
+.title p{font-size:20px;color:#666}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
+.news-card{background:white;border-radius:24px;overflow:hidden;box-shadow:0 12px 35px rgba(0,0,0,.1)}
+.news-card img{width:100%;height:220px;object-fit:cover}
+.news-body{padding:30px}
+.date{color:#d4af37;font-weight:bold;margin-bottom:10px}
+.news-body h3{font-size:26px;color:#7a1f1f;margin-bottom:12px}
+.news-body p{font-size:17px;color:#555;margin-bottom:18px}
+.btn{display:inline-block;background:#d4af37;color:white;padding:13px 30px;border-radius:50px;font-weight:bold}
+
+.feature{background:#111;color:white}
+.feature .title h2{color:#d4af37}
+.feature .title p{color:#ddd}
+.feature-box{max-width:1000px;margin:auto;background:#1f1f1f;border-radius:25px;padding:45px}
+.feature-box h3{font-size:34px;color:#d4af37;margin-bottom:15px}
+.feature-box p{font-size:18px;color:#eee;margin-bottom:14px}
+
+.cta{background:#7a1f1f;color:white;text-align:center}
+.cta h2{font-size:42px;margin-bottom:15px}
+.cta p{font-size:20px;margin-bottom:25px}
+
+footer{background:#111;color:white;text-align:center;padding:55px 8%}
+@media(max-width:850px){
+nav{display:none}
+.logo span{display:none}
+.hero h1{font-size:42px}
+.hero h2{font-size:26px}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-<h1>North America Chinese Culture Foundation</h1>
+<div class="logo">
+<img src="logo.png.jpg">
+<div>
+<strong>NACCF</strong>
+<span>North America Chinese Culture Foundation</span>
+</div>
+</div>
+<nav>
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT</a>
+<a href="programs.html">PROGRAMS</a>
+<a href="volunteer.html">VOLUNTEER</a>
+<a href="news.html">NEWS</a>
+<a href="donate.html">DONATE</a>
+<a href="contact.html">CONTACT</a>
+</nav>
 </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="programs.html">Programs</a>
-<a href="donate.html">Donate</a>
-<a href="news.html">News</a>
-<a href="contact.html">Contact</a>
-</nav>
-
-<div class="hero">
+<section class="hero">
+<div>
 <h1>News & Updates</h1>
-<h2>新闻中心 · 最新动态</h2>
+<h2>最新动态</h2>
+<p>Follow our foundation news, community stories, volunteer activities, and program updates.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="title">
+<h2>Latest News</h2>
+<p>基金会新闻中心</p>
 </div>
 
-<div class="container">
+<div class="grid">
 
-<div class="news">
-<h2>Foundation Website Officially Launched</h2>
+<div class="news-card">
+<img src="hero-banner.jpg">
+<div class="news-body">
 <div class="date">June 2026</div>
-<p>
-North America Chinese Culture Foundation has launched its official website,
-providing information about cultural exchange, educational support, charity programs,
-volunteer opportunities, and donation initiatives.
-</p>
-<p>
-北美中国文化基金会官方网站正式上线，将用于发布文化交流、教育助学、公益慈善、
-志愿者服务及捐赠项目相关信息。
-</p>
+<h3>Official Website Launch</h3>
+<p>The official website of North America Chinese Culture Foundation is now online.</p>
+<a class="btn" href="#">Read More</a>
+</div>
 </div>
 
-<div class="news">
-<h2>Charity Programs Are Being Developed</h2>
+<div class="news-card">
+<img src="education-banner.jpg">
+<div class="news-body">
 <div class="date">June 2026</div>
-<p>
-The Foundation is preparing several public service programs, including education support,
-senior care, animal rescue, medical assistance, and cultural exchange initiatives.
-</p>
-<p>
-基金会正在筹备多个公益项目，包括教育助学、老人关怀、动物救助、医疗援助及文化交流项目。
-</p>
+<h3>Education Support Program</h3>
+<p>Our education support program will help students through scholarships, books, and learning resources.</p>
+<a class="btn" href="#">Read More</a>
+</div>
 </div>
 
-<div class="news">
-<h2>Volunteers and Partners Welcome</h2>
+<div class="news-card">
+<img src="senior-banner.jpg">
+<div class="news-body">
 <div class="date">June 2026</div>
-<p>
-We welcome volunteers, educators, artists, community leaders, donors, and partner organizations
-to join our mission of service and cultural connection.
-</p>
-<p>
-我们欢迎志愿者、教育工作者、艺术家、社区领袖、捐赠者及合作机构共同参与公益事业。
-</p>
+<h3>Senior Care Program</h3>
+<p>The foundation is preparing senior care activities to support dignity, companionship, and community care.</p>
+<a class="btn" href="#">Read More</a>
+</div>
+</div>
+
+<div class="news-card">
+<img src="culture-banner.jpg">
+<div class="news-body">
+<div class="date">June 2026</div>
+<h3>Cultural Heritage Program</h3>
+<p>We are building cultural programs to preserve Chinese heritage and promote cross-cultural understanding.</p>
+<a class="btn" href="#">Read More</a>
+</div>
+</div>
+
+<div class="news-card">
+<img src="donate-banner.jpg">
+<div class="news-body">
+<div class="date">Coming Soon</div>
+<h3>Donation Program Preparing</h3>
+<p>Donation channels, monthly giving, and corporate sponsorship programs are being prepared.</p>
+<a class="btn" href="donate.html">Support Us</a>
+</div>
+</div>
+
+<div class="news-card">
+<img src="hero-banner.jpg">
+<div class="news-body">
+<div class="date">Coming Soon</div>
+<h3>Volunteer Recruitment</h3>
+<p>We welcome volunteers, educators, artists, donors, and community leaders to join our mission.</p>
+<a class="btn" href="volunteer.html">Join Us</a>
+</div>
 </div>
 
 </div>
+</section>
+
+<section class="section feature">
+<div class="title">
+<h2>Community Stories</h2>
+<p>社区故事</p>
+</div>
+
+<div class="feature-box">
+<h3>Every Act of Kindness Becomes a Story of Hope</h3>
+<p>Behind every donation, every volunteer hour, and every community program, there is a story of compassion and service.</p>
+<p>North America Chinese Culture Foundation will continue to share stories from education, senior care, culture, and community service.</p>
+</div>
+</section>
+
+<section class="section">
+<div class="title">
+<h2>Media & Announcements</h2>
+<p>媒体与公告</p>
+</div>
+
+<div class="grid">
+<div class="news-card">
+<div class="news-body">
+<div class="date">Announcement</div>
+<h3>Program Partners Welcome</h3>
+<p>Schools, businesses, cultural organizations, and community groups are welcome to contact us for partnership opportunities.</p>
+<a class="btn" href="contact.html">Contact Us</a>
+</div>
+</div>
+
+<div class="news-card">
+<div class="news-body">
+<div class="date">Announcement</div>
+<h3>Volunteers Welcome</h3>
+<p>Join our volunteer team and serve through education, senior care, cultural heritage, and community outreach.</p>
+<a class="btn" href="volunteer.html">Apply Now</a>
+</div>
+</div>
+
+<div class="news-card">
+<div class="news-body">
+<div class="date">Announcement</div>
+<h3>Donation Inquiries</h3>
+<p>For major gifts, corporate sponsorship, or monthly giving, please contact our donation office.</p>
+<a class="btn" href="donate.html">Donate</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section cta">
+<h2>Together We Care. Together We Change Lives.</h2>
+<p>携手奉献爱心，共同改变生命。</p>
+<a class="btn" href="donate.html">Support Our Work</a>
+</section>
 
 <footer>
-© 2026 North America Chinese Culture Foundation
+<h3>North America Chinese Culture Foundation</h3>
+<p>Houston, Texas, USA</p>
+<p>info@nacculture.org</p>
+<p>www.nacculture.org</p>
+<br>
+<p>© 2026 North America Chinese Culture Foundation. All Rights Reserved.</p>
+<p>501(c)(3) Application Pending</p>
 </footer>
 
 </body>
