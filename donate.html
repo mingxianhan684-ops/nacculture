@@ -3,55 +3,253 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donate | NACCF</title>
+<title>Donate | North America Chinese Culture Foundation</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.7}
 a{text-decoration:none}
 
-header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.88);padding:18px 8%;display:flex;justify-content:space-between;align-items:center}
-.logo{color:white;font-size:24px;font-weight:bold}
-nav a{color:white;margin-left:24px;font-size:15px;font-weight:bold}
-nav a:hover{color:#f4c542}
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+background:rgba(0,0,0,.9);
+padding:14px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
 
-.hero{min-height:90vh;background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url("donate-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 80px}
-.hero h1{font-size:66px;color:white;line-height:1.1;margin-bottom:20px}
-.hero h2{font-size:34px;color:#f4c542;margin-bottom:20px}
-.hero p{font-size:22px;color:white;max-width:900px;margin:auto auto 35px}
-.btn{display:inline-block;background:#f4c542;color:#111;padding:16px 40px;border-radius:50px;font-weight:bold;font-size:18px;margin:8px}
-.btn-dark{background:#111;color:white}
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+color:white;
+}
+
+.logo img{
+width:56px;
+height:56px;
+border-radius:50%;
+background:white;
+}
+
+.logo strong{
+display:block;
+font-size:24px;
+letter-spacing:1px;
+}
+
+.logo span{
+display:block;
+font-size:12px;
+color:#ddd;
+}
+
+nav a{
+color:white;
+margin-left:22px;
+font-size:14px;
+font-weight:bold;
+}
+
+nav a:hover{color:#d4af37}
+
+.hero{
+min-height:92vh;
+background:
+linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.65)),
+url("donate-banner.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:flex-end;
+justify-content:center;
+text-align:center;
+padding:160px 8% 90px;
+}
+
+.hero-box{
+max-width:1050px;
+color:white;
+}
+
+.hero h1{
+font-size:64px;
+line-height:1.1;
+margin-bottom:18px;
+text-shadow:0 4px 20px rgba(0,0,0,.7);
+}
+
+.hero h2{
+font-size:34px;
+color:#d4af37;
+margin-bottom:18px;
+}
+
+.hero p{
+font-size:21px;
+max-width:900px;
+margin:auto auto 32px;
+}
+
+.btn{
+display:inline-block;
+background:#d4af37;
+color:white;
+padding:17px 42px;
+border-radius:50px;
+font-weight:800;
+font-size:18px;
+margin:8px;
+box-shadow:0 8px 20px rgba(212,175,55,.35);
+}
+
+.btn-dark{
+background:#111;
+border:2px solid white;
+}
 
 .section{padding:90px 8%}
+
 .title{text-align:center;margin-bottom:55px}
 .title h2{font-size:44px;color:#7a1f1f;margin-bottom:12px}
 .title p{font-size:20px;color:#666}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
-.card{background:white;border-radius:20px;padding:35px;box-shadow:0 10px 30px rgba(0,0,0,.09)}
-.card h3{font-size:25px;color:#7a1f1f;margin-bottom:12px}
-.card p{color:#555;font-size:17px}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:28px;
+}
 
-.amounts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:22px}
-.amount{background:white;border:2px solid #f4c542;border-radius:18px;padding:28px;text-align:center;font-weight:bold;font-size:28px;color:#7a1f1f}
+.card{
+background:white;
+border-radius:22px;
+padding:35px;
+box-shadow:0 10px 30px rgba(0,0,0,.09);
+transition:.3s;
+}
 
-.impact{background:#111;color:white}
-.impact .title h2{color:#f4c542}
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card h3{
+font-size:25px;
+color:#7a1f1f;
+margin-bottom:12px;
+}
+
+.card p{
+font-size:17px;
+color:#555;
+}
+
+.amounts{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+gap:22px;
+}
+
+.amount{
+background:white;
+border:2px solid #d4af37;
+border-radius:20px;
+padding:30px;
+text-align:center;
+font-weight:900;
+font-size:30px;
+color:#7a1f1f;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.amount span{
+display:block;
+font-size:15px;
+color:#555;
+margin-top:8px;
+font-weight:500;
+}
+
+.impact{
+background:#111;
+color:white;
+}
+
+.impact .title h2{color:#d4af37}
 .impact .title p{color:#ddd}
-.impact .card{background:#1d1d1d;color:white}
-.impact .card h3{color:#f4c542}
+.impact .card{background:#1e1e1e}
+.impact .card h3{color:#d4af37}
+.impact .card p{color:#eee}
 
-.formbox{max-width:900px;margin:auto;background:white;padding:45px;border-radius:25px;box-shadow:0 15px 40px rgba(0,0,0,.12)}
-input,select,textarea{width:100%;padding:16px;margin-bottom:15px;border:1px solid #ddd;border-radius:12px;font-size:16px}
+.notice{
+background:#fff8e5;
+border-left:6px solid #d4af37;
+padding:25px;
+border-radius:14px;
+max-width:1000px;
+margin:35px auto 0;
+font-size:17px;
+}
+
+.formbox{
+max-width:900px;
+margin:auto;
+background:white;
+padding:45px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+}
+
+input,select,textarea{
+width:100%;
+padding:16px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:12px;
+font-size:16px;
+}
+
 textarea{height:150px}
-button{width:100%;padding:18px;border:none;border-radius:50px;background:#d4a017;color:white;font-size:20px;font-weight:bold}
 
-footer{background:#111;color:white;text-align:center;padding:50px 8%}
+button{
+width:100%;
+padding:18px;
+border:none;
+border-radius:50px;
+background:#d4af37;
+color:white;
+font-size:20px;
+font-weight:bold;
+cursor:pointer;
+}
 
-@media(max-width:800px){
-.hero h1{font-size:40px}
+.cta{
+background:#7a1f1f;
+color:white;
+text-align:center;
+}
+
+.cta h2{
+font-size:44px;
+margin-bottom:20px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:55px 8%;
+}
+
+@media(max-width:850px){
+.hero h1{font-size:42px}
 .hero h2{font-size:26px}
 nav{display:none}
+.logo span{display:none}
 }
 </style>
 </head>
@@ -59,7 +257,14 @@ nav{display:none}
 <body>
 
 <header>
-<div class="logo">NACCF</div>
+<div class="logo">
+<img src="logo.png">
+<div>
+<strong>NACCF</strong>
+<span>North America Chinese Culture Foundation</span>
+</div>
+</div>
+
 <nav>
 <a href="index.html">HOME</a>
 <a href="about.html">ABOUT</a>
@@ -72,30 +277,54 @@ nav{display:none}
 </header>
 
 <section class="hero">
-<div>
+<div class="hero-box">
 <h1>Every Donation Changes Lives</h1>
 <h2>每一份爱心，都能改变生命</h2>
-<p>Your generosity supports education, senior care, cultural heritage, community service, and families in need.</p>
-<a href="#give" class="btn">Donate Now</a>
+<p>
+Your generosity supports education, senior care, cultural heritage,
+community service, and families in need.
+</p>
+<a href="#amount" class="btn">Donate Now</a>
 <a href="#monthly" class="btn btn-dark">Monthly Giving</a>
 </div>
 </section>
 
-<section class="section" id="give">
+<section class="section" id="amount">
+<div class="title">
+<h2>Choose Your Impact</h2>
+<p>选择您的爱心金额</p>
+</div>
+
+<div class="amounts">
+<div class="amount">$25<span>Education Materials</span></div>
+<div class="amount">$50<span>Senior Outreach</span></div>
+<div class="amount">$100<span>Community Support</span></div>
+<div class="amount">$500<span>Cultural Program</span></div>
+<div class="amount">$1,000<span>Major Support</span></div>
+</div>
+
+<div class="notice">
+Donation payment links are being prepared. PayPal, credit card and monthly giving links will be added after the official payment account is ready.
+<br>
+捐赠支付链接正在准备中。PayPal、信用卡和月捐链接将在官方账户准备完成后添加。
+</div>
+</section>
+
+<section class="section">
 <div class="title">
 <h2>Donation Options</h2>
-<p>选择您的捐赠方式</p>
+<p>捐赠方式</p>
 </div>
 
 <div class="grid">
 <div class="card">
 <h3>💳 Credit Card Donation</h3>
-<p>Support by Visa, MasterCard, American Express or debit card. Payment link coming soon.</p>
+<p>Support by Visa, MasterCard, American Express, or debit card.</p>
 </div>
 
 <div class="card">
 <h3>🅿️ PayPal Donation</h3>
-<p>Donate securely through PayPal. PayPal donation link will be added after account setup.</p>
+<p>Donate securely through PayPal after our official link is activated.</p>
 </div>
 
 <div class="card">
@@ -105,7 +334,7 @@ nav{display:none}
 
 <div class="card">
 <h3>🏢 Corporate Sponsorship</h3>
-<p>Companies may support education, senior care, cultural events and community programs.</p>
+<p>Businesses may sponsor education, senior care, and cultural programs.</p>
 </div>
 </div>
 </section>
@@ -116,12 +345,11 @@ nav{display:none}
 <p>成为月捐伙伴，持续支持公益</p>
 </div>
 
-<div class="amounts">
-<div class="amount">$10 / Month</div>
-<div class="amount">$25 / Month</div>
-<div class="amount">$50 / Month</div>
-<div class="amount">$100 / Month</div>
-<div class="amount">Custom</div>
+<div class="grid">
+<div class="card"><h3>$10 / Month</h3><p>Help support small community needs.</p></div>
+<div class="card"><h3>$25 / Month</h3><p>Support education and youth programs.</p></div>
+<div class="card"><h3>$50 / Month</h3><p>Support senior care and outreach.</p></div>
+<div class="card"><h3>$100 / Month</h3><p>Become a sustaining community supporter.</p></div>
 </div>
 </section>
 
@@ -132,10 +360,10 @@ nav{display:none}
 </div>
 
 <div class="grid">
-<div class="card"><h3>$25</h3><p>Provides educational materials for students.</p></div>
-<div class="card"><h3>$50</h3><p>Supports senior care and community outreach.</p></div>
-<div class="card"><h3>$100</h3><p>Helps organize cultural and educational programs.</p></div>
-<div class="card"><h3>$500</h3><p>Sponsors a community service or cultural event.</p></div>
+<div class="card"><h3>Education</h3><p>Books, scholarships, tutoring, and learning resources.</p></div>
+<div class="card"><h3>Senior Care</h3><p>Community care, companionship, and emergency support.</p></div>
+<div class="card"><h3>Cultural Heritage</h3><p>Chinese culture, arts, language, and heritage programs.</p></div>
+<div class="card"><h3>Community Service</h3><p>Support for families, youth, and local communities.</p></div>
 </div>
 </section>
 
@@ -202,10 +430,10 @@ nav{display:none}
 </div>
 </section>
 
-<section class="section" style="background:#7a1f1f;color:white;text-align:center">
-<h2 style="font-size:44px;margin-bottom:20px">Together We Care. Together We Change Lives.</h2>
+<section class="section cta">
+<h2>Together We Care. Together We Change Lives.</h2>
 <p style="font-size:20px;margin-bottom:30px">携手奉献爱心，共同改变生命。</p>
-<a href="#give" class="btn">Give Today</a>
+<a href="#amount" class="btn">Give Today</a>
 </section>
 
 <footer>
