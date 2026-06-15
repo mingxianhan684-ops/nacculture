@@ -2,266 +2,631 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Volunteer | NACCF</title>
+<title>Volunteer | North America Chinese Culture Foundation</title>
 
 <style>
 
-body{
+*{
 margin:0;
-font-family:Arial,sans-serif;
-background:#f5f7fa;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f8fafc;
+color:#333;
+line-height:1.7;
+}
+
+a{
+text-decoration:none;
 }
 
 header{
-background:#111;
-padding:20px;
-text-align:center;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+background:rgba(0,0,0,.85);
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-header h1{
+.logo{
 color:white;
-margin:0;
+font-size:28px;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+margin-left:28px;
+font-weight:bold;
+font-size:15px;
 }
 
 .hero{
-background:linear-gradient(rgba(0,0,0,.55),
-rgba(0,0,0,.55)),
-url('hero-banner.jpg');
+height:85vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.55)
+),
+url("hero-banner.jpg");
+
 background-size:cover;
 background-position:center;
-padding:120px 20px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
 text-align:center;
-color:white;
+
+padding:20px;
 }
 
-.hero h2{
-font-size:52px;
-margin-bottom:15px;
-}
-
-.hero p{
-font-size:22px;
+.hero-content{
 max-width:900px;
-margin:auto;
+color:white;
 }
 
-.form-box{
-
-max-width:850px;
-
-margin:60px auto;
-
-background:white;
-
-padding:40px;
-
-border-radius:25px;
-
-box-shadow:0 10px 30px rgba(0,0,0,.15);
-
-}
-
-.form-box h2{
-
-text-align:center;
-
-font-size:42px;
-
+.hero-content h1{
+font-size:70px;
 margin-bottom:15px;
-
-color:#5d1f1f;
-
 }
 
-.form-box p{
-
-text-align:center;
-
-margin-bottom:35px;
-
-color:#666;
-
+.hero-content h2{
+font-size:36px;
+margin-bottom:20px;
+color:#ffd369;
 }
 
-input,
-select,
-textarea{
-
-width:100%;
-
-padding:15px;
-
-margin-bottom:18px;
-
-font-size:16px;
-
-border:1px solid #ddd;
-
-border-radius:12px;
-
-box-sizing:border-box;
-
+.hero-content p{
+font-size:22px;
+margin-bottom:30px;
 }
 
-textarea{
-
-height:150px;
-
-resize:none;
-
-}
-
-button{
-
-width:100%;
-
-background:#d4a017;
-
-color:white;
-
-border:none;
-
-padding:18px;
-
-font-size:20px;
-
+.btn{
+display:inline-block;
+padding:16px 40px;
+background:#f5b301;
+color:black;
 font-weight:bold;
-
 border-radius:50px;
-
-cursor:pointer;
-
+transition:.3s;
 }
 
-button:hover{
-
-background:#b8860b;
-
+.btn:hover{
+background:#ffcc33;
+transform:translateY(-3px);
 }
 
-.benefits{
-
-padding:80px 10%;
-
-background:white;
-
+.section{
+padding:100px 8%;
 }
 
-.benefits h2{
-
+.section-title{
 text-align:center;
-
-font-size:40px;
-
-margin-bottom:50px;
-
-color:#5d1f1f;
-
+margin-bottom:60px;
 }
 
-.cards{
+.section-title h2{
+font-size:48px;
+color:#6d1f1f;
+margin-bottom:15px;
+}
 
+.section-title p{
+font-size:20px;
+color:#666;
+}
+
+.why-grid{
 display:grid;
-
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-
-gap:25px;
-
+gap:30px;
 }
 
-.card{
-
-background:#fafafa;
-
-padding:30px;
-
+.why-card{
+background:white;
+padding:40px;
 border-radius:20px;
-
+box-shadow:0 10px 30px rgba(0,0,0,.08);
 text-align:center;
-
-box-shadow:0 5px 15px rgba(0,0,0,.08);
-
 }
 
-.card h3{
-
-margin-bottom:10px;
-
+.why-card span{
+font-size:55px;
+display:block;
+margin-bottom:15px;
 }
 
-footer{
+.why-card h3{
+margin-bottom:15px;
+font-size:28px;
+color:#6d1f1f;
+}
 
-background:#111;
-
-color:white;
-
-text-align:center;
-
-padding:30px;
-
-margin-top:60px;
-
+.why-card p{
+font-size:18px;
+color:#555;
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
 
-<h1>North America Chinese Culture Foundation</h1>
+<div class="logo">
+NACCF
+</div>
+
+<nav>
+
+<a href="index.html">HOME</a>
+
+<a href="about.html">ABOUT</a>
+
+<a href="programs.html">PROGRAMS</a>
+
+<a href="board.html">BOARD</a>
+
+<a href="volunteer.html">VOLUNTEER</a>
+
+<a href="news.html">NEWS</a>
+
+<a href="donate.html">DONATE</a>
+
+<a href="contact.html">CONTACT</a>
+
+</nav>
 
 </header>
 
 <section class="hero">
 
-<h2>Become a Volunteer</h2>
+<div class="hero-content">
+
+<h1>Become a Volunteer</h1>
+
+<h2>加入志愿者团队</h2>
 
 <p>
-Join our mission of education, culture,
-senior care, and community service.
+Together We Care. Together We Change Lives.
+<br>
+携手奉献爱心，共同改变生命。
 </p>
+
+<a href="#apply" class="btn">
+Join Today
+</a>
+
+</div>
 
 </section>
 
-<div class="form-box">
+<section class="section">
+
+<div class="section-title">
+
+<h2>Why Volunteer</h2>
+
+<p>为什么加入北美中华文化基金会</p>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<span>❤️</span>
+
+<h3>Serve Community</h3>
+
+<p>
+帮助社区家庭、
+老人及有需要的人群
+</p>
+
+</div>
+
+<div class="why-card">
+
+<span>🎓</span>
+
+<h3>Gain Experience</h3>
+
+<p>
+获得公益实践经验
+丰富大学申请履历
+</p>
+
+</div>
+
+<div class="why-card">
+
+<span>🏮</span>
+
+<h3>Promote Culture</h3>
+
+<p>
+传播中华文化
+促进国际交流
+</p>
+
+</div>
+
+<div class="why-card">
+
+<span>🌎</span>
+
+<h3>Build Network</h3>
+
+<p>
+认识优秀志愿者、
+企业家与社区领袖
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="section">
+
+<div class="section-title">
+
+<h2>Volunteer Benefits</h2>
+
+<p>成为志愿者能获得什么</p>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<span>📜</span>
+
+<h3>Service Certificate</h3>
+
+<p>
+志愿服务证书
+记录服务时长
+</p>
+
+</div>
+
+<div class="why-card">
+
+<span>✍️</span>
+
+<h3>Recommendation Letter</h3>
+
+<p>
+优秀志愿者可获得推荐信
+用于大学申请
+</p>
+
+</div>
+
+<div class="why-card">
+
+<span>🏆</span>
+
+<h3>Leadership Experience</h3>
+
+<p>
+参与项目管理
+培养领导能力
+</p>
+
+</div>
+
+<div class="why-card">
+
+<span>🌍</span>
+
+<h3>Community Impact</h3>
+
+<p>
+帮助社区
+创造积极影响
+</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="section" style="background:#f5f7fa;">
+
+<div class="section-title">
+
+<h2>Volunteer Gallery</h2>
+
+<p>志愿者活动精彩瞬间</p>
+
+</div>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+">
+
+<div>
+
+<img src="education-banner.jpg"
+style="
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:20px;">
+
+<h3 style="margin-top:15px">
+Education Program
+</h3>
+
+</div>
+
+<div>
+
+<img src="senior-banner.jpg"
+style="
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:20px;">
+
+<h3 style="margin-top:15px">
+Senior Care Program
+</h3>
+
+</div>
+
+<div>
+
+<img src="culture-banner.jpg"
+style="
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:20px;">
+
+<h3 style="margin-top:15px">
+Cultural Exchange
+</h3>
+
+</div>
+
+</div>
+
+</section>
+<section class="section">
+
+<div class="section-title">
+
+<h2>Our Impact</h2>
+
+<p>公益影响力</p>
+
+</div>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+text-align:center;
+">
+
+<div class="why-card">
+
+<h2 style="
+font-size:60px;
+color:#8b0000;
+">
+10,000+
+</h2>
+
+<p>Families Helped</p>
+
+</div>
+
+<div class="why-card">
+
+<h2 style="
+font-size:60px;
+color:#8b0000;
+">
+5,000+
+</h2>
+
+<p>Students Supported</p>
+
+</div>
+
+<div class="why-card">
+
+<h2 style="
+font-size:60px;
+color:#8b0000;
+">
+20,000+
+</h2>
+
+<p>Community Participants</p>
+
+</div>
+
+<div class="why-card">
+
+<h2 style="
+font-size:60px;
+color:#8b0000;
+">
+1,000+
+</h2>
+
+<p>Volunteers</p>
+
+</div>
+
+</div>
+
+</section>
+<section class="section" style="background:#f3f6fb;">
+
+<div class="section-title">
+
+<h2>Frequently Asked Questions</h2>
+
+<p>常见问题</p>
+
+</div>
+
+<div class="why-card">
+
+<h3>Do I need experience?</h3>
+
+<p>
+No. Training will be provided.
+无需经验，我们会提供培训。
+</p>
+
+</div>
+
+<br>
+
+<div class="why-card">
+
+<h3>What is the minimum age?</h3>
+
+<p>
+Recommended age: 16+
+建议年龄16岁以上。
+</p>
+
+</div>
+
+<br>
+
+<div class="why-card">
+
+<h3>Can I volunteer remotely?</h3>
+
+<p>
+Yes. Some projects support online participation.
+部分项目支持线上参与。
+</p>
+
+</div>
+
+</section>
+<section id="apply" class="section">
+
+<div class="section-title">
 
 <h2>Volunteer Application</h2>
 
 <p>
-Thank you for your interest in serving
-our community.
+志愿者报名申请表
 </p>
+
+</div>
+
+<div style="
+max-width:900px;
+margin:auto;
+background:white;
+padding:50px;
+border-radius:25px;
+box-shadow:0 15px 40px rgba(0,0,0,.12);
+">
 
 <form>
 
-<input type="text"
-placeholder="Full Name">
+<input
+type="text"
+placeholder="Full Name / 姓名"
+style="
+width:100%;
+padding:16px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:12px;
+">
 
-<input type="email"
-placeholder="Email Address">
+<input
+type="email"
+placeholder="Email Address / 邮箱"
+style="
+width:100%;
+padding:16px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:12px;
+">
 
-<input type="text"
-placeholder="Phone Number">
+<input
+type="text"
+placeholder="Phone Number / 电话"
+style="
+width:100%;
+padding:16px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:12px;
+">
 
-<input type="text"
-placeholder="City / State">
+<input
+type="text"
+placeholder="City & State / 城市"
+style="
+width:100%;
+padding:16px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:12px;
+">
 
-<select>
+<input
+type="number"
+placeholder="Age / 年龄"
+style="
+width:100%;
+padding:16px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:12px;
+">
+
+<select
+style="
+width:100%;
+padding:16px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:12px;
+">
 
 <option>
-Select Volunteer Area
+Volunteer Area
 </option>
 
 <option>
-Education Support
+Education Program
 </option>
 
 <option>
@@ -269,7 +634,7 @@ Senior Care
 </option>
 
 <option>
-Community Service
+Community Outreach
 </option>
 
 <option>
@@ -277,77 +642,125 @@ Cultural Events
 </option>
 
 <option>
-Fundraising
+Media & Marketing
+</option>
+
+<option>
+Administration
 </option>
 
 </select>
 
-<textarea
-placeholder="Tell us about yourself">
-</textarea>
+<input
+type="text"
+placeholder="Skills & Experience / 技能特长"
+style="
+width:100%;
+padding:16px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:12px;
+">
 
-<button>
+<textarea
+placeholder="Tell Us About Yourself / 自我介绍"
+style="
+width:100%;
+height:180px;
+padding:16px;
+border:1px solid #ddd;
+border-radius:12px;
+margin-bottom:20px;
+"></textarea>
+
+<button
+style="
+width:100%;
+padding:18px;
+border:none;
+background:#d4a017;
+color:white;
+font-size:20px;
+font-weight:bold;
+border-radius:50px;
+cursor:pointer;
+">
+
 Submit Application
+
 </button>
 
 </form>
 
 </div>
 
-<section class="benefits">
+</section>
+<section class="section" style="background:#f5f7fa;">
 
-<h2>Volunteer Opportunities</h2>
+<div class="section-title">
 
-<div class="cards">
+<h2>Contact Us</h2>
 
-<div class="card">
-<h3>🎓 Education</h3>
 <p>
-Support students through tutoring,
-scholarships and educational projects.
+联系我们
 </p>
+
 </div>
 
-<div class="card">
-<h3>❤️ Senior Care</h3>
-<p>
-Visit and support senior citizens
-through outreach activities.
-</p>
-</div>
+<div style="
+text-align:center;
+font-size:20px;
+">
 
-<div class="card">
-<h3>🤝 Community</h3>
 <p>
-Participate in local events and
-community service programs.
+📍 Houston, Texas, USA
 </p>
-</div>
 
-<div class="card">
-<h3>🏮 Culture</h3>
+<br>
+
 <p>
-Promote Chinese culture through
-events and educational programs.
+📧 volunteer@nacculture.org
 </p>
-</div>
+
+<br>
+
+<p>
+🌐 www.nacculture.org
+</p>
 
 </div>
 
 </section>
 
-<footer>
+  <footer style="
+background:#111;
+color:white;
+padding:50px 8%;
+text-align:center;
+">
+
+<h3>
+North America Chinese Culture Foundation
+</h3>
+
+<br>
+
+<p>
+Together We Care · Together We Change Lives
+</p>
+
+<br>
 
 <p>
 © 2026 North America Chinese Culture Foundation
 </p>
 
 <p>
-volunteer@nacculture.org
+All Rights Reserved
+</p>
+
+<p>
+501(c)(3) Application Pending
 </p>
 
 </footer>
-
-</body>
-
-</html>
