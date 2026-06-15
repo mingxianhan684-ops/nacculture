@@ -1,163 +1,951 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>North America Chinese Culture Foundation</title>
+
+<title>
+North America Chinese Culture Foundation
+</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f3ea;color:#222;line-height:1.6}
-a{text-decoration:none}
-header{position:sticky;top:0;z-index:99;background:rgba(20,20,20,.95);color:white;padding:18px 8%;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:22px;font-weight:bold}
-nav a{color:white;margin-left:22px;font-size:15px}
-.hero{min-height:92vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('./hero-banner.jpg');
-  background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-.hero h1{font-size:56px;line-height:1.15;margin-bottom:18px}
-.hero h2{font-size:32px;margin-bottom:20px}
-.hero p{font-size:20px;max-width:850px;margin:8px auto}
-.btn{display:inline-block;margin-top:28px;background:#c99a28;color:white;padding:15px 36px;border-radius:40px;font-weight:bold}
-section{padding:75px 8%}
-.title{text-align:center;margin-bottom:45px}
-.title h2{font-size:36px;color:#7a1f1f}
-.title p{font-size:18px;color:#666}
-.about{background:white;text-align:center}
-.about p{max-width:1000px;margin:14px auto;font-size:18px}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
-.card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,.1)}
-.card img{width:100%;height:190px;object-fit:cover}
-.card div{padding:24px}
-.card h3{color:#7a1f1f;font-size:22px;margin-bottom:10px}
-.donate{background:linear-gradient(rgba(80,20,20,.9),rgba(80,20,20,.9)),url("https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1800&q=80");background-size:cover;background-position:center;color:white;text-align:center}
-.donate h2{font-size:38px}
-.donate p{font-size:20px;max-width:900px;margin:12px auto}
-.news{background:white}
-.newsbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
-.newsitem{background:#f8f3ea;border-radius:16px;padding:26px}
-.contact{text-align:center;background:#efe3d0}
-.contact p{font-size:18px;margin:8px}
-footer{background:#111;color:white;text-align:center;padding:35px 8%;font-size:14px}
-@media(max-width:760px){
-header{flex-direction:column;gap:12px}
-nav a{margin:0 8px}
-.hero h1{font-size:36px}
-.hero h2{font-size:24px}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#fafafa;
+color:#222;
+line-height:1.7;
+}
+
+a{
+text-decoration:none;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* =====================
+NAVIGATION
+===================== */
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+right:0;
+
+background:rgba(10,10,10,.92);
+
+backdrop-filter:blur(8px);
+
+z-index:9999;
+
+padding:18px 8%;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+.logo{
+
+font-size:24px;
+
+font-weight:700;
+
+color:white;
+
+}
+
+nav a{
+
+color:white;
+
+margin-left:24px;
+
+font-size:15px;
+
+font-weight:600;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#f4c542;
+
+}
+
+/* =====================
+HERO SECTION
+===================== */
+
+.hero{
+
+min-height:100vh;
+
+background:
+linear-gradient(
+rgba(0,0,0,.55),
+rgba(0,0,0,.55)
+),
+
+url('./hero-banner.jpg');
+
+background-size:cover;
+
+background-position:center;
+
+background-repeat:no-repeat;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:140px 8% 80px;
+
+}
+
+.hero-content{
+
+max-width:1100px;
+
+}
+
+.hero h1{
+
+font-size:68px;
+
+line-height:1.1;
+
+color:white;
+
+margin-bottom:20px;
+
+text-shadow:0 4px 20px rgba(0,0,0,.5);
+
+}
+
+.hero h2{
+
+font-size:36px;
+
+color:#f4c542;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+color:white;
+
+max-width:900px;
+
+margin:auto;
+
+margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.btn-primary{
+
+background:#f4c542;
+
+color:black;
+
+padding:16px 38px;
+
+border-radius:50px;
+
+font-weight:700;
+
+font-size:18px;
+
+}
+
+.btn-secondary{
+
+border:2px solid white;
+
+color:white;
+
+padding:16px 38px;
+
+border-radius:50px;
+
+font-weight:700;
+
+font-size:18px;
+
+}
+
+/* =====================
+MISSION
+===================== */
+
+.section{
+
+padding:90px 8%;
+
+}
+
+.section-title{
+
+text-align:center;
+
+margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+font-size:42px;
+
+color:#8b0000;
+
+margin-bottom:15px;
+
+}
+
+.section-title p{
+
+font-size:20px;
+
+color:#666;
+
+}
+
+.mission-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+}
+
+.mission-card{
+
+background:white;
+
+padding:35px;
+
+border-radius:18px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+text-align:center;
+
+}
+
+.mission-card h3{
+
+font-size:26px;
+
+margin-bottom:15px;
+
+color:#8b0000;
+
+}
+
+.mission-card p{
+
+font-size:17px;
+
+color:#555;
+
+}
+
+/* =====================
+PROGRAMS
+===================== */
+
+.programs{
+
+background:#f5f5f5;
+
+}
+
+.program-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(320px,1fr));
+
+gap:35px;
+
+}
+
+.program-card{
+
+background:white;
+
+border-radius:18px;
+
+overflow:hidden;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+transition:.3s;
+
+}
+
+.program-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.program-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+}
+
+.program-card-content{
+
+padding:25px;
+
+}
+
+.program-card h3{
+
+font-size:24px;
+
+color:#8b0000;
+
+margin-bottom:10px;
+
+}
+
+.program-card p{
+
+color:#555;
+
+font-size:16px;
+
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero h2{
+font-size:28px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+nav{
+display:none;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
 
 <header>
-  <div class="logo">NAC Culture Foundation</div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#programs">Programs</a>
-    <a href="#donate">Donate</a>
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
 
-<div class="hero">
-  <div>
-    <h1>North America Chinese Culture Foundation</h1>
-    <h2>北美中国文化基金会</h2>
-    <p>Promoting culture, education, compassion, and community service across North America.</p>
-    <p>传承文化，支持教育，关爱社区，传递善意。</p>
-    <a class="btn" href="#donate">Donate Now / 立即捐赠</a>
-  </div>
+<div class="logo">
+NACCF
 </div>
 
-<section id="about" class="about">
-  <div class="title">
-    <h2>Our Mission / 我们的使命</h2>
-    <p>Culture · Education · Charity · Community</p>
-  </div>
-  <p>
-    North America Chinese Culture Foundation is organized exclusively for charitable,
-    educational, and cultural purposes. We promote cultural exchange, support youth education,
-    care for seniors, and serve families and communities in need.
-  </p>
-  <p>
-    北美中国文化基金会致力于慈善、教育与文化公益事业，推动中华文化传承、青少年教育支持、
-    老人关怀、社区公益服务，并促进北美多元文化之间的理解与交流。
-  </p>
+<nav>
+
+<a href="index.html">HOME</a>
+
+<a href="about.html">ABOUT</a>
+
+<a href="programs.html">PROGRAMS</a>
+
+<a href="board.html">BOARD</a>
+
+<a href="volunteer.html">VOLUNTEER</a>
+
+<a href="news.html">NEWS</a>
+
+<a href="donate.html">DONATE</a>
+
+<a href="contact.html">CONTACT</a>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+North America Chinese Culture Foundation
+</h1>
+
+<h2>
+北美中华文化基金会
+</h2>
+
+<p>
+
+Connecting Cultures • Empowering Education • Serving Communities
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="donate.html" class="btn-primary">
+Donate Now
+</a>
+
+<a href="volunteer.html" class="btn-secondary">
+Become a Volunteer
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="programs">
-  <div class="title">
-    <h2>Our Programs / 公益项目</h2>
-    <p>Every act of kindness creates a brighter future.</p>
-  </div>
+<section class="section">
 
-  <div class="cards">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80">
-      <div><h3>Education Support<br>助学基金</h3><p>Supporting students, scholarships, books, learning resources, and educational opportunities.</p></div>
-    </div>
+<div class="section-title">
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1516307365426-bea591f05011?auto=format&fit=crop&w=900&q=80">
-      <div><h3>Senior Care<br>敬老关怀</h3><p>Providing care, respect, companionship, and community support for seniors in need.</p></div>
-    </div>
+<h2>
+Our Mission
+</h2>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?auto=format&fit=crop&w=900&q=80">
-      <div><h3>Chinese Culture Education<br>中华文化教育</h3><p>Promoting Chinese language, history, literature, art, traditions, and cultural heritage.</p></div>
-    </div>
+<p>
+Culture • Education • Compassion • Community
+</p>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80">
-      <div><h3>Cultural Exchange<br>文化交流</h3><p>Building bridges between Chinese culture and North American communities through events and programs.</p></div>
-    </div>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=900&q=80">
-      <div><h3>Pet Rescue Fund<br>宠物救助基金</h3><p>Supporting animal rescue, adoption awareness, and compassionate community care.</p></div>
-    </div>
+<div class="mission-grid">
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=900&q=80">
-      <div><h3>Medical Assistance<br>医疗援助</h3><p>Helping families and individuals facing hardship caused by medical needs and emergencies.</p></div>
-    </div>
-  </div>
+<div class="mission-card">
+
+<h3>🎓 Education</h3>
+
+<p>
+Supporting scholarships, educational opportunities,
+and lifelong learning.
+</p>
+
+</div>
+
+<div class="mission-card">
+
+<h3>👴 Senior Care</h3>
+
+<p>
+Providing care, companionship,
+and support for seniors.
+</p>
+
+</div>
+
+<div class="mission-card">
+
+<h3>🌏 Cultural Exchange</h3>
+
+<p>
+Promoting understanding and friendship
+between cultures.
+</p>
+
+</div>
+
+<div class="mission-card">
+
+<h3>🤝 Community Service</h3>
+
+<p>
+Serving families, youth,
+and local communities.
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="donate" class="donate">
-  <h2>Support Our Work / 支持我们的公益事业</h2>
-  <p>Your kindness helps preserve culture, support education, care for seniors, and serve the community.</p>
-  <p>您的每一份爱心，都将成为文化传承、教育支持与社区关怀的一束光。</p>
-  <a class="btn" href="#">Donation Link Coming Soon / 捐款链接即将开放</a>
+<section class="section programs">
+
+<div class="section-title">
+
+<h2>
+Featured Programs
+</h2>
+
+<p>
+Building a Better Future Together
+</p>
+
+</div>
+
+<div class="program-grid">
+
+<div class="program-card">
+
+<img src="education-banner.jpg">
+
+<div class="program-card-content">
+
+<h3>
+Education Fund
+</h3>
+
+<p>
+Scholarships, books,
+and educational resources.
+</p>
+
+</div>
+
+</div>
+
+<div class="program-card">
+
+<img src="senior-banner.jpg">
+
+<div class="program-card-content">
+
+<h3>
+Senior Care Fund
+</h3>
+
+<p>
+Supporting seniors through
+community outreach and services.
+</p>
+
+</div>
+
+</div>
+
+<div class="program-card">
+
+<img src="culture-banner.jpg">
+
+<div class="program-card-content">
+
+<h3>
+Cultural Exchange
+</h3>
+
+<p>
+Promoting Chinese culture
+and international understanding.
+</p>
+
+</div>
+
+</div>
 </section>
 
-<section id="news" class="news">
-  <div class="title">
-    <h2>News & Updates / 最新动态</h2>
-    <p>Foundation activities, community stories, and cultural events.</p>
-  </div>
-  <div class="newsbox">
-    <div class="newsitem"><h3>Official Website Launched</h3><p>The official website of North America Chinese Culture Foundation is now online.</p></div>
-    <div class="newsitem"><h3>Charity Programs Preparing</h3><p>We are preparing education, senior care, cultural exchange, and community service programs.</p></div>
-    <div class="newsitem"><h3>Volunteers Welcome</h3><p>We welcome volunteers, partners, donors, educators, artists, and community leaders.</p></div>
-  </div>
+<!-- =====================
+IMPACT STATISTICS
+===================== -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+Our Impact
+</h2>
+
+<p>
+Making a Difference Together
+</p>
+
+</div>
+
+<div style="
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+text-align:center;">
+
+<div style="
+background:white;
+padding:40px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<h2 style="font-size:48px;color:#8b0000;">
+10,000+
+</h2>
+
+<p>
+Families Helped
+</p>
+
+</div>
+
+<div style="
+background:white;
+padding:40px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<h2 style="font-size:48px;color:#8b0000;">
+5,000+
+</h2>
+
+<p>
+Students Supported
+</p>
+
+</div>
+
+<div style="
+background:white;
+padding:40px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<h2 style="font-size:48px;color:#8b0000;">
+20,000+
+</h2>
+
+<p>
+Community Participants
+</p>
+
+</div>
+
+<div style="
+background:white;
+padding:40px;
+border-radius:18px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);">
+
+<h2 style="font-size:48px;color:#8b0000;">
+1,000+
+</h2>
+
+<p>
+Volunteers
+</p>
+
+</div>
+
+</div>
+
 </section>
 
-<section id="contact" class="contact">
-  <div class="title">
-    <h2>Contact Us / 联系我们</h2>
-  </div>
-  <p>Email: chinahanjing@126.com</p>
-  <p>Houston, Texas, United States</p>
-  <p>Website: www.nacculture.org</p>
+<!-- =====================
+DONATE SECTION
+===================== -->
+
+<section style="
+background:
+linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+url('./donate-banner.jpg');
+background-size:cover;
+background-position:center;
+padding:120px 8%;
+text-align:center;
+color:white;">
+
+<h2 style="
+font-size:56px;
+margin-bottom:20px;">
+
+Every Donation Changes Lives
+
+</h2>
+
+<p style="
+font-size:22px;
+max-width:900px;
+margin:auto;
+margin-bottom:40px;">
+
+Your support helps preserve culture,
+expand educational opportunities,
+and strengthen communities.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="donate.html" class="btn-primary">
+
+Donate with PayPal
+
+</a>
+
+<a href="donate.html" class="btn-secondary">
+
+Corporate Sponsorship
+
+</a>
+
+</div>
+
 </section>
 
-<footer>
-  <p>© 2026 North America Chinese Culture Foundation. All Rights Reserved.</p>
-  <p>北美中国文化基金会 版权所有</p>
+<!-- =====================
+LATEST NEWS
+===================== -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+Latest News
+</h2>
+
+<p>
+Foundation Updates & Community Stories
+</p>
+
+</div>
+
+<div class="program-grid">
+
+<div class="program-card">
+
+<div class="program-card-content">
+
+<h3>
+Foundation Website Launch
+</h3>
+
+<p>
+
+Official website of the Foundation
+is now online.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="program-card">
+
+<div class="program-card-content">
+
+<h3>
+Volunteer Recruitment
+</h3>
+
+<p>
+
+Join our volunteer network
+and serve the community.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="program-card">
+
+<div class="program-card-content">
+
+<h3>
+Education Support Program
+</h3>
+
+<p>
+
+Supporting students through
+scholarships and educational aid.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================
+VOLUNTEER
+===================== -->
+
+<section style="
+background:#f4f4f4;
+padding:100px 8%;
+text-align:center;">
+
+<h2 style="
+font-size:48px;
+color:#8b0000;
+margin-bottom:20px;">
+
+Become a Volunteer
+
+</h2>
+
+<p style="
+font-size:20px;
+max-width:900px;
+margin:auto;
+margin-bottom:35px;">
+
+Join our mission to support
+education, culture,
+senior care,
+and community service.
+
+</p>
+
+<a href="volunteer.html" class="btn-primary">
+
+Join Today
+
+</a>
+
+</section>
+
+<!-- =====================
+CONTACT
+===================== -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+Contact Us
+</h2>
+
+<p>
+We Would Love To Hear From You
+</p>
+
+</div>
+
+<div style="
+text-align:center;
+font-size:20px;">
+
+<p>
+📍 Houston, Texas, USA
+</p>
+
+<p>
+📧 info@nacculture.org
+</p>
+
+<p>
+🌐 www.nacculture.org
+</p>
+
+</div>
+
+</section>
+
+<!-- =====================
+FOOTER
+===================== -->
+
+<footer style="
+background:#111;
+color:white;
+text-align:center;
+padding:50px 8%;">
+
+<h3 style="margin-bottom:15px;">
+
+North America Chinese Culture Foundation
+
+</h3>
+
+<p>
+
+Connecting Cultures • Empowering Education • Serving Communities
+
+</p>
+
+<br>
+
+<p>
+
+© 2026 North America Chinese Culture Foundation
+
+</p>
+
+<p>
+
+All Rights Reserved
+
+</p>
+
+<p>
+
+501(c)(3) Application Pending
+
+</p>
+
 </footer>
 
 </body>
+
 </html>
