@@ -3,131 +3,219 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donate | NAC Culture Foundation</title>
+<title>Donate | NACCF</title>
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.7}
+a{text-decoration:none}
 
-body{
-margin:0;
-font-family:Arial,Microsoft YaHei;
-background:#f5f5f5;
+header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.88);padding:18px 8%;display:flex;justify-content:space-between;align-items:center}
+.logo{color:white;font-size:24px;font-weight:bold}
+nav a{color:white;margin-left:24px;font-size:15px;font-weight:bold}
+nav a:hover{color:#f4c542}
+
+.hero{min-height:90vh;background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),url("donate-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 80px}
+.hero h1{font-size:66px;color:white;line-height:1.1;margin-bottom:20px}
+.hero h2{font-size:34px;color:#f4c542;margin-bottom:20px}
+.hero p{font-size:22px;color:white;max-width:900px;margin:auto auto 35px}
+.btn{display:inline-block;background:#f4c542;color:#111;padding:16px 40px;border-radius:50px;font-weight:bold;font-size:18px;margin:8px}
+.btn-dark{background:#111;color:white}
+
+.section{padding:90px 8%}
+.title{text-align:center;margin-bottom:55px}
+.title h2{font-size:44px;color:#7a1f1f;margin-bottom:12px}
+.title p{font-size:20px;color:#666}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{background:white;border-radius:20px;padding:35px;box-shadow:0 10px 30px rgba(0,0,0,.09)}
+.card h3{font-size:25px;color:#7a1f1f;margin-bottom:12px}
+.card p{color:#555;font-size:17px}
+
+.amounts{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:22px}
+.amount{background:white;border:2px solid #f4c542;border-radius:18px;padding:28px;text-align:center;font-weight:bold;font-size:28px;color:#7a1f1f}
+
+.impact{background:#111;color:white}
+.impact .title h2{color:#f4c542}
+.impact .title p{color:#ddd}
+.impact .card{background:#1d1d1d;color:white}
+.impact .card h3{color:#f4c542}
+
+.formbox{max-width:900px;margin:auto;background:white;padding:45px;border-radius:25px;box-shadow:0 15px 40px rgba(0,0,0,.12)}
+input,select,textarea{width:100%;padding:16px;margin-bottom:15px;border:1px solid #ddd;border-radius:12px;font-size:16px}
+textarea{height:150px}
+button{width:100%;padding:18px;border:none;border-radius:50px;background:#d4a017;color:white;font-size:20px;font-weight:bold}
+
+footer{background:#111;color:white;text-align:center;padding:50px 8%}
+
+@media(max-width:800px){
+.hero h1{font-size:40px}
+.hero h2{font-size:26px}
+nav{display:none}
 }
-
-header{
-background:#111;
-padding:20px;
-}
-
-header a{
-color:white;
-text-decoration:none;
-margin-right:25px;
-font-weight:bold;
-}
-
-.hero{
-background:url('https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?auto=format&fit=crop&w=1600&q=80');
-background-size:cover;
-background-position:center;
-padding:130px 20px;
-text-align:center;
-color:white;
-}
-
-.hero h1{
-font-size:52px;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-padding:50px 20px;
-}
-
-.card{
-background:white;
-padding:30px;
-margin-bottom:25px;
-border-radius:15px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-.card h2{
-color:#b8860b;
-}
-
-.donate-btn{
-display:inline-block;
-background:#f4b400;
-color:white;
-padding:15px 35px;
-border-radius:50px;
-text-decoration:none;
-font-size:20px;
-font-weight:bold;
-}
-
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
-}
-
 </style>
 </head>
 
 <body>
 
 <header>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="programs.html">Programs</a>
-<a href="donate.html">Donate</a>
-<a href="contact.html">Contact</a>
+<div class="logo">NACCF</div>
+<nav>
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT</a>
+<a href="programs.html">PROGRAMS</a>
+<a href="volunteer.html">VOLUNTEER</a>
+<a href="news.html">NEWS</a>
+<a href="donate.html">DONATE</a>
+<a href="contact.html">CONTACT</a>
+</nav>
 </header>
 
-<div class="hero">
-<h1>Donate Today</h1>
-<h2>爱心捐赠 · 改变未来</h2>
+<section class="hero">
+<div>
+<h1>Every Donation Changes Lives</h1>
+<h2>每一份爱心，都能改变生命</h2>
+<p>Your generosity supports education, senior care, cultural heritage, community service, and families in need.</p>
+<a href="#give" class="btn">Donate Now</a>
+<a href="#monthly" class="btn btn-dark">Monthly Giving</a>
+</div>
+</section>
+
+<section class="section" id="give">
+<div class="title">
+<h2>Donation Options</h2>
+<p>选择您的捐赠方式</p>
 </div>
 
-<div class="container">
-
+<div class="grid">
 <div class="card">
-<h2>🎓 Education Fund</h2>
-<p>Support scholarships and educational opportunities for students.</p>
-<p>支持困难学生奖学金与教育项目。</p>
-</div>
-
-<div class="card">
-<h2>👴 Senior Care Fund</h2>
-<p>Support senior citizen services and community outreach.</p>
-<p>支持老人关怀和社区公益服务。</p>
-</div>
-
-<div class="card">
-<h2>🐶 Pet Rescue Fund</h2>
-<p>Help rescue homeless animals and provide medical care.</p>
-<p>帮助流浪动物救助和医疗护理。</p>
+<h3>💳 Credit Card Donation</h3>
+<p>Support by Visa, MasterCard, American Express or debit card. Payment link coming soon.</p>
 </div>
 
 <div class="card">
-<h2>🏮 Cultural Exchange Fund</h2>
-<p>Promote Chinese culture and international understanding.</p>
-<p>推动中华文化传播和国际文化交流。</p>
+<h3>🅿️ PayPal Donation</h3>
+<p>Donate securely through PayPal. PayPal donation link will be added after account setup.</p>
 </div>
 
-<div style="text-align:center;margin-top:40px;">
-<a class="donate-btn" href="#">
-Donate Now | 立即捐赠
-</a>
+<div class="card">
+<h3>🏦 Bank Transfer</h3>
+<p>For bank transfer instructions, please contact our donation office.</p>
 </div>
 
+<div class="card">
+<h3>🏢 Corporate Sponsorship</h3>
+<p>Companies may support education, senior care, cultural events and community programs.</p>
 </div>
+</div>
+</section>
+
+<section class="section" id="monthly" style="background:#f1eee8">
+<div class="title">
+<h2>Monthly Giving Program</h2>
+<p>成为月捐伙伴，持续支持公益</p>
+</div>
+
+<div class="amounts">
+<div class="amount">$10 / Month</div>
+<div class="amount">$25 / Month</div>
+<div class="amount">$50 / Month</div>
+<div class="amount">$100 / Month</div>
+<div class="amount">Custom</div>
+</div>
+</section>
+
+<section class="section impact">
+<div class="title">
+<h2>Your Donation Impact</h2>
+<p>您的捐赠将带来真实改变</p>
+</div>
+
+<div class="grid">
+<div class="card"><h3>$25</h3><p>Provides educational materials for students.</p></div>
+<div class="card"><h3>$50</h3><p>Supports senior care and community outreach.</p></div>
+<div class="card"><h3>$100</h3><p>Helps organize cultural and educational programs.</p></div>
+<div class="card"><h3>$500</h3><p>Sponsors a community service or cultural event.</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="title">
+<h2>Major Giving</h2>
+<p>大额捐赠与企业赞助</p>
+</div>
+
+<div class="grid">
+<div class="card"><h3>Patron</h3><p>$1,000+ Supporter</p></div>
+<div class="card"><h3>Benefactor</h3><p>$5,000+ Supporter</p></div>
+<div class="card"><h3>Visionary</h3><p>$10,000+ Supporter</p></div>
+<div class="card"><h3>Legacy Circle</h3><p>$25,000+ Supporter</p></div>
+</div>
+</section>
+
+<section class="section" style="background:#f1eee8">
+<div class="title">
+<h2>Donation Inquiry Form</h2>
+<p>捐赠咨询表</p>
+</div>
+
+<div class="formbox">
+<form>
+<input type="text" placeholder="Full Name / 姓名">
+<input type="email" placeholder="Email Address / 邮箱">
+<input type="text" placeholder="Phone Number / 电话">
+<select>
+<option>Donation Interest</option>
+<option>One-Time Donation</option>
+<option>Monthly Giving</option>
+<option>Corporate Sponsorship</option>
+<option>Major Gift</option>
+<option>In-Kind Donation</option>
+</select>
+<textarea placeholder="Message / 留言"></textarea>
+<button type="submit">Submit Inquiry</button>
+</form>
+</div>
+</section>
+
+<section class="section">
+<div class="title">
+<h2>Frequently Asked Questions</h2>
+<p>常见问题</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>Is my donation tax deductible?</h3>
+<p>Tax-deductible status depends on the foundation’s IRS status. Please contact us for the latest information.</p>
+</div>
+
+<div class="card">
+<h3>Can I donate monthly?</h3>
+<p>Yes. Monthly giving options will be available after payment setup is complete.</p>
+</div>
+
+<div class="card">
+<h3>Can corporations sponsor programs?</h3>
+<p>Yes. We welcome corporate sponsorship and community partnerships.</p>
+</div>
+</div>
+</section>
+
+<section class="section" style="background:#7a1f1f;color:white;text-align:center">
+<h2 style="font-size:44px;margin-bottom:20px">Together We Care. Together We Change Lives.</h2>
+<p style="font-size:20px;margin-bottom:30px">携手奉献爱心，共同改变生命。</p>
+<a href="#give" class="btn">Give Today</a>
+</section>
 
 <footer>
-© 2026 North America Chinese Culture Foundation
+<h3>North America Chinese Culture Foundation</h3>
+<p>Houston, Texas, USA</p>
+<p>donations@nacculture.org</p>
+<p>www.nacculture.org</p>
+<br>
+<p>© 2026 North America Chinese Culture Foundation. All Rights Reserved.</p>
+<p>501(c)(3) Application Pending</p>
 </footer>
 
 </body>
