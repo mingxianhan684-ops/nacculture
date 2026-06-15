@@ -3,85 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us</title>
+<title>Contact | NACCF</title>
 
 <style>
-body{
-font-family:Arial, sans-serif;
-margin:0;
-background:#f4f6f9;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.7}
+a{text-decoration:none;color:inherit}
 
-header{
-background:#003366;
-color:white;
-padding:25px;
-text-align:center;
-}
+header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.9);padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;color:white}
+.logo img{width:56px;height:56px;border-radius:50%;background:white}
+.logo strong{display:block;font-size:24px;letter-spacing:1px}
+.logo span{display:block;font-size:12px;color:#ddd}
+nav a{color:white;margin-left:22px;font-size:14px;font-weight:bold}
+nav a:hover{color:#d4af37}
 
-nav{
-background:#0055a5;
-padding:12px;
-text-align:center;
-}
+.hero{min-height:70vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),url("hero-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 70px}
+.hero h1{font-size:64px;color:white;margin-bottom:15px;text-shadow:0 4px 20px rgba(0,0,0,.7)}
+.hero h2{font-size:34px;color:#d4af37;margin-bottom:15px}
+.hero p{font-size:21px;color:white;max-width:850px;margin:auto}
 
-nav a{
-color:white;
-text-decoration:none;
-margin:15px;
-font-weight:bold;
-}
+.section{padding:90px 8%}
+.title{text-align:center;margin-bottom:55px}
+.title h2{font-size:44px;color:#7a1f1f;margin-bottom:12px}
+.title p{font-size:20px;color:#666}
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:40px;
-}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{background:white;border-radius:22px;padding:35px;box-shadow:0 10px 30px rgba(0,0,0,.09)}
+.card h3{font-size:25px;color:#7a1f1f;margin-bottom:12px}
+.card p{font-size:17px;color:#555}
 
-.contact-box{
-background:white;
-padding:30px;
-border-radius:12px;
-box-shadow:0 0 10px rgba(0,0,0,0.1);
-}
+.contact-wrap{display:grid;grid-template-columns:1fr 1.3fr;gap:35px;align-items:start}
+.info-box{background:#111;color:white;border-radius:25px;padding:42px}
+.info-box h3{font-size:30px;color:#d4af37;margin-bottom:20px}
+.info-box p{margin-bottom:18px;font-size:18px;color:#eee}
 
-h2{
-color:#003366;
-}
+.formbox{background:white;padding:45px;border-radius:25px;box-shadow:0 15px 40px rgba(0,0,0,.12)}
+input,select,textarea{width:100%;padding:16px;margin-bottom:15px;border:1px solid #ddd;border-radius:12px;font-size:16px}
+textarea{height:170px}
+button{width:100%;padding:18px;border:none;border-radius:50px;background:#d4af37;color:white;font-size:20px;font-weight:bold;cursor:pointer}
 
-.info{
-margin-bottom:20px;
-font-size:18px;
-}
+.map{height:320px;background:linear-gradient(135deg,#eee,#ddd);border-radius:25px;display:flex;align-items:center;justify-content:center;text-align:center;color:#555;font-size:22px;font-weight:bold}
 
-form{
-display:flex;
-flex-direction:column;
-}
+.cta{background:#7a1f1f;color:white;text-align:center}
+.cta h2{font-size:42px;margin-bottom:15px}
+.cta p{font-size:20px}
 
-input,textarea{
-padding:12px;
-margin-bottom:15px;
-border:1px solid #ccc;
-border-radius:5px;
-}
+footer{background:#111;color:white;text-align:center;padding:55px 8%}
 
-button{
-background:#0055a5;
-color:white;
-border:none;
-padding:15px;
-font-size:18px;
-border-radius:5px;
-cursor:pointer;
-}
-
-footer{
-background:#003366;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
+@media(max-width:850px){
+nav{display:none}
+.logo span{display:none}
+.hero h1{font-size:42px}
+.hero h2{font-size:26px}
+.contact-wrap{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -89,62 +64,132 @@ margin-top:40px;
 <body>
 
 <header>
-<h1>Contact Us</h1>
-<p>North America Chinese Culture Foundation</p>
-</header>
+<div class="logo">
+<img src="logo.png.jpg">
+<div>
+<strong>NACCF</strong>
+<span>North America Chinese Culture Foundation</span>
+</div>
+</div>
 
 <nav>
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-<a href="programs.html">Programs</a>
-<a href="donate.html">Donate</a>
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT</a>
+<a href="programs.html">PROGRAMS</a>
+<a href="volunteer.html">VOLUNTEER</a>
+<a href="news.html">NEWS</a>
+<a href="donate.html">DONATE</a>
+<a href="contact.html">CONTACT</a>
 </nav>
+</header>
 
-<div class="container">
+<section class="hero">
+<div>
+<h1>Contact Us</h1>
+<h2>联系我们</h2>
+<p>
+We welcome donors, volunteers, partners, educators, artists, and community leaders to connect with us.
+</p>
+</div>
+</section>
 
-<div class="contact-box">
-
-<h2>Get In Touch</h2>
-
-<div class="info">
-📍 Houston, Texas, USA
+<section class="section">
+<div class="title">
+<h2>Get in Touch</h2>
+<p>欢迎与北美中华文化基金会联系</p>
 </div>
 
-<div class="info">
-🌐 www.nacculture.org
+<div class="contact-wrap">
+
+<div class="info-box">
+<h3>Contact Information</h3>
+<p>📍 Houston, Texas, USA</p>
+<p>📧 info@nacculture.org</p>
+<p>📧 donations@nacculture.org</p>
+<p>📧 volunteer@nacculture.org</p>
+<p>🌐 www.nacculture.org</p>
+<br>
+<p>For donation, volunteer, partnership, media, or community service inquiries, please use the form.</p>
 </div>
 
-<div class="info">
-📧 chinabookpress@gmail.com
-</div>
-
-<div class="info">
-🤝 Partnership & Volunteer Opportunities Welcome
-</div>
-
-<h2>Send Us A Message</h2>
-
+<div class="formbox">
 <form>
-<input type="text" placeholder="Your Name">
+<input type="text" placeholder="Full Name / 姓名">
+<input type="email" placeholder="Email Address / 邮箱">
+<input type="text" placeholder="Phone Number / 电话">
 
-<input type="email" placeholder="Your Email">
+<select>
+<option>Inquiry Type / 咨询类型</option>
+<option>Donation / 捐赠</option>
+<option>Volunteer / 志愿者</option>
+<option>Partnership / 合作</option>
+<option>Education Program / 教育项目</option>
+<option>Senior Care Program / 敬老项目</option>
+<option>Media Inquiry / 媒体咨询</option>
+<option>General Inquiry / 一般咨询</option>
+</select>
 
-<input type="text" placeholder="Subject">
+<textarea placeholder="Message / 留言"></textarea>
 
-<textarea rows="6" placeholder="Your Message"></textarea>
-
-<button type="submit">
-Send Message
-</button>
-
+<button type="submit">Send Message</button>
 </form>
-
 </div>
 
 </div>
+</section>
+
+<section class="section" style="background:#f1eee8">
+<div class="title">
+<h2>Our Departments</h2>
+<p>联系不同部门</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>💛 Donation Office</h3>
+<p>For donations, monthly giving, corporate sponsorship and major gifts.</p>
+<p>donations@nacculture.org</p>
+</div>
+
+<div class="card">
+<h3>🤝 Volunteer Team</h3>
+<p>For volunteer applications, service hours and community activities.</p>
+<p>volunteer@nacculture.org</p>
+</div>
+
+<div class="card">
+<h3>🎓 Programs Office</h3>
+<p>For education, senior care, cultural exchange and community programs.</p>
+<p>info@nacculture.org</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="title">
+<h2>Location</h2>
+<p>Houston, Texas</p>
+</div>
+
+<div class="map">
+Google Map Placeholder<br>
+地图位置预留区域
+</div>
+</section>
+
+<section class="section cta">
+<h2>Together We Care. Together We Change Lives.</h2>
+<p>携手奉献爱心，共同改变生命。</p>
+</section>
 
 <footer>
-© 2026 North America Chinese Culture Foundation
+<h3>North America Chinese Culture Foundation</h3>
+<p>Houston, Texas, USA</p>
+<p>info@nacculture.org</p>
+<p>www.nacculture.org</p>
+<br>
+<p>© 2026 North America Chinese Culture Foundation. All Rights Reserved.</p>
+<p>501(c)(3) Application Pending</p>
 </footer>
 
 </body>
