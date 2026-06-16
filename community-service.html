@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>社区关爱计划 | NACCF</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.8}
+a{text-decoration:none;color:inherit}
+header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.92);padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;color:white}
+.logo img{width:58px;height:58px;border-radius:50%;background:white;object-fit:cover}
+.logo strong{display:block;font-size:24px}
+.logo span{display:block;font-size:12px;color:#ddd}
+nav a{color:white;margin-left:22px;font-size:14px;font-weight:bold}
+nav a:hover{color:#d4af37}
 
+.hero{min-height:78vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.68)),url("hero-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 70px}
+.hero h1{font-size:62px;color:white;text-shadow:0 4px 20px #000;margin-bottom:12px}
+.hero h2{font-size:34px;color:#d4af37;margin-bottom:18px}
+.hero p{font-size:22px;color:white;max-width:900px;margin:auto}
+
+.section{padding:90px 8%}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.story img{width:100%;border-radius:26px;box-shadow:0 15px 40px rgba(0,0,0,.18)}
+.story h2{font-size:40px;color:#7a1f1f;margin-bottom:18px}
+.story p{font-size:19px;color:#555;margin-bottom:16px}
+
+.title{text-align:center;margin-bottom:50px}
+.title h2{font-size:44px;color:#7a1f1f;margin-bottom:10px}
+.title p{font-size:20px;color:#666}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{background:white;border-radius:22px;padding:34px;box-shadow:0 12px 35px rgba(0,0,0,.1)}
+.card h3{font-size:26px;color:#7a1f1f;margin-bottom:14px}
+.card p,.card li{font-size:17px;color:#555}
+
+.impact{background:#111;color:white}
+.impact .title h2{color:#d4af37}
+.impact .title p{color:#ddd}
+.impact .card{background:#1e1e1e;text-align:center}
+.impact .card h3{font-size:42px;color:#d4af37}
+.impact .card p{color:#eee}
+
+.donate{background:#7a1f1f;color:white;text-align:center}
+.donate h2{font-size:44px;margin-bottom:18px}
+.donate p{font-size:20px;max-width:850px;margin:0 auto 30px}
+.btn{display:inline-block;background:#d4af37;color:white;padding:15px 36px;border-radius:50px;font-weight:bold;margin:8px}
+.btn.dark{background:#111}
+
+footer{background:#111;color:white;text-align:center;padding:50px 8%}
+@media(max-width:850px){
+nav{display:none}
+.logo span{display:none}
+.hero h1{font-size:40px}
+.story{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="logo.png.jpg">
+<div>
+<strong>NACCF</strong>
+<span>北美中华文化基金会</span>
+</div>
+</div>
+<nav>
+<a href="index.html">首页</a>
+<a href="about.html">关于</a>
+<a href="programs.html">项目</a>
+<a href="volunteer.html">志愿</a>
+<a href="news.html">新闻</a>
+<a href="donate.html">捐赠</a>
+<a href="contact.html">联系方式</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>社区关爱计划</h1>
+<h2>Community Service Program</h2>
+<p>让社区多一份温暖，让困难家庭多一份希望。</p>
+</div>
+</section>
+
+<section class="section">
+<div class="story">
+<img src="hero-banner.jpg">
+<div>
+<h2>一个社区的温度，来自每一次帮助</h2>
+<p>社区不是冷冰冰的街道和房屋，而是人与人之间的关怀、支持和连接。</p>
+<p>在北美生活的家庭中，有些人正在经历经济压力、语言障碍、孤独、疾病、失业或突发困难。</p>
+<p>北美中华文化基金会希望通过社区关爱计划，为有需要的家庭、青少年、老人和弱势群体提供及时支持。</p>
+<p>我们相信，一个真正强大的社区，是在有人遇到困难时，仍然有人愿意伸出手。</p>
+</div>
+</div>
+</section>
+
+<section class="section" style="background:#f1eee8">
+<div class="title">
+<h2>您的捐款将用于</h2>
+<p>Your donation will support community service</p>
+</div>
+
+<div class="grid">
+<div class="card"><h3>❤️ 困难家庭援助</h3><p>为经济困难家庭提供食品、生活用品和紧急支持。</p></div>
+<div class="card"><h3>👨‍👩‍👧 青少年成长</h3><p>支持青少年活动、心理关怀、社区教育和成长机会。</p></div>
+<div class="card"><h3>🏘️ 社区公益活动</h3><p>组织节日活动、公益讲座、社区服务日和志愿者行动。</p></div>
+<div class="card"><h3>🍱 食品与生活物资</h3><p>为有需要的人群提供基础食品、衣物和生活用品。</p></div>
+<div class="card"><h3>🤝 新移民支持</h3><p>协助新移民家庭了解社区资源、语言支持和生活信息。</p></div>
+<div class="card"><h3>📢 公益宣传</h3><p>推广互助、奉献、社区参与和多元文化理解。</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="title">
+<h2>为什么这个项目重要？</h2>
+<p>Why this program matters</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>因为困难常常来得突然</h3>
+<p>一次失业、一场疾病、一张账单，都可能让一个家庭陷入困境。社区支持可以帮助他们重新站起来。</p>
+</div>
+
+<div class="card">
+<h3>因为新移民需要连接</h3>
+<p>很多新移民家庭面对语言、文化和生活适应压力，需要一个可信赖的社区支持网络。</p>
+</div>
+
+<div class="card">
+<h3>因为善意会传递</h3>
+<p>当一个人被帮助，他也更可能在未来帮助别人。社区公益创造的是长期的温暖循环。</p>
+</div>
+</div>
+</section>
+
+<section class="section impact">
+<div class="title">
+<h2>项目目标</h2>
+<p>Our Goals</p>
+</div>
+
+<div class="grid">
+<div class="card"><h3>20,000+</h3><p>Community Participants</p></div>
+<div class="card"><h3>5,000+</h3><p>Families Supported</p></div>
+<div class="card"><h3>1,000+</h3><p>Volunteer Hours</p></div>
+<div class="card"><h3>100+</h3><p>Community Events</p></div>
+</div>
+</section>
+
+<section class="section donate">
+<h2>支持社区关爱计划</h2>
+<p>您的支持，将帮助更多家庭在困难中得到力量，让社区成为真正温暖的家园。</p>
+<a class="btn" href="donate.html">立即捐款 Donate Now</a>
+<a class="btn dark" href="volunteer.html">成为志愿者</a>
+<a class="btn dark" href="programs.html">返回项目页</a>
+</section>
+
+<footer>
+<h3>North America Chinese Culture Foundation</h3>
+<p>北美中华文化基金会</p>
+<p>Houston, Texas, USA</p>
+<p>info@nacculture.org</p>
+<p>www.nacculture.org</p>
+<br>
+<p>© 2026 North America Chinese Culture Foundation. All Rights Reserved.</p>
+<p>501(c)(3) Application Pending</p>
+</footer>
+
+</body>
+</html>
