@@ -1,59 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Programs | NACCF</title>
+<title>Our Programs | NACCF</title>
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.7}
+body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.8}
 a{text-decoration:none;color:inherit}
 
-header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.9);padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
+header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.92);padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
 .logo{display:flex;align-items:center;gap:12px;color:white}
-.logo img{width:56px;height:56px;border-radius:50%;background:white}
-.logo strong{display:block;font-size:24px;letter-spacing:1px}
+.logo img{width:58px;height:58px;border-radius:50%;background:white;object-fit:cover}
+.logo strong{display:block;font-size:24px}
 .logo span{display:block;font-size:12px;color:#ddd}
 nav a{color:white;margin-left:22px;font-size:14px;font-weight:bold}
 nav a:hover{color:#d4af37}
 
-.hero{min-height:75vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),url("hero-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 70px}
-.hero h1{font-size:64px;color:white;margin-bottom:15px;text-shadow:0 4px 20px rgba(0,0,0,.7)}
-.hero h2{font-size:34px;color:#d4af37;margin-bottom:15px}
-.hero p{font-size:21px;color:white;max-width:900px;margin:auto}
+.hero{min-height:76vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.68)),url("hero-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 70px}
+.hero h1{font-size:66px;color:white;text-shadow:0 4px 20px #000;margin-bottom:12px}
+.hero h2{font-size:34px;color:#d4af37;margin-bottom:18px}
+.hero p{font-size:22px;color:white;max-width:950px;margin:auto}
 
 .section{padding:90px 8%}
 .title{text-align:center;margin-bottom:55px}
-.title h2{font-size:44px;color:#7a1f1f;margin-bottom:12px}
+.title h2{font-size:46px;color:#7a1f1f;margin-bottom:10px}
 .title p{font-size:20px;color:#666}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:30px}
-.card{background:white;border-radius:24px;overflow:hidden;box-shadow:0 12px 35px rgba(0,0,0,.1);transition:.3s}
-.card:hover{transform:translateY(-6px)}
-.card img{width:100%;height:230px;object-fit:cover}
-.card-body{padding:32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:34px}
+.card{background:white;border-radius:24px;overflow:hidden;box-shadow:0 12px 35px rgba(0,0,0,.12);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.card img{width:100%;height:280px;object-fit:cover}
+.card-body{padding:34px}
 .card h3{font-size:28px;color:#7a1f1f;margin-bottom:12px}
 .card p{font-size:17px;color:#555;margin-bottom:14px}
-.card ul{padding-left:20px;color:#555;margin-bottom:20px}
+.card ul{padding-left:22px;color:#555;margin-bottom:22px}
 .card li{margin-bottom:8px}
-.btn{display:inline-block;background:#d4af37;color:white;padding:13px 30px;border-radius:50px;font-weight:bold}
-
-.feature{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.feature img{width:100%;border-radius:28px;box-shadow:0 15px 40px rgba(0,0,0,.16)}
-.feature h2{font-size:44px;color:#7a1f1f;margin-bottom:18px}
-.feature p{font-size:19px;color:#555;margin-bottom:18px}
-
-.impact{background:#111;color:white}
-.impact .title h2{color:#d4af37}
-.impact .title p{color:#ddd}
-.impact .box{background:#1e1e1e;border-radius:22px;padding:35px;text-align:center}
-.impact .box h3{font-size:46px;color:#d4af37}
-.impact .box p{font-size:18px;color:#eee}
+.btn{display:inline-block;background:#d4af37;color:white;padding:14px 32px;border-radius:50px;font-weight:bold}
 
 .cta{background:#7a1f1f;color:white;text-align:center}
 .cta h2{font-size:44px;margin-bottom:18px}
-.cta p{font-size:20px;margin-bottom:28px}
+.cta p{font-size:20px;max-width:850px;margin:0 auto 30px}
 
 footer{background:#111;color:white;text-align:center;padding:55px 8%}
 
@@ -62,7 +50,6 @@ nav{display:none}
 .logo span{display:none}
 .hero h1{font-size:42px}
 .hero h2{font-size:26px}
-.feature{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -93,9 +80,7 @@ nav{display:none}
 <div>
 <h1>Our Programs</h1>
 <h2>公益项目</h2>
-<p>
-Serving seniors, supporting education, preserving culture, and strengthening communities across North America.
-</p>
+<p>Each program tells a story of compassion, education, culture, and community service.</p>
 </div>
 </section>
 
@@ -108,180 +93,97 @@ Serving seniors, supporting education, preserving culture, and strengthening com
 <div class="grid">
 
 <div class="card">
-<img src="senior-banner.jpg">
+<img src="senior-care-banner.jpg">
 <div class="card-body">
 <h3>👴 Senior Care Program</h3>
-<p>敬老关爱计划</p>
+<p>老年护理与敬老关爱项目</p>
 <ul>
 <li>Senior visits and companionship</li>
 <li>Holiday care packages</li>
-<li>Emergency community support</li>
-<li>Health and dignity outreach</li>
+<li>Health and dignity support</li>
 </ul>
-<a class="btn" href="donate.html">Support This Program</a>
+<a class="btn" href="senior-care.html">Learn More & Support</a>
 </div>
 </div>
 
 <div class="card">
-<img src="education-banner.jpg">
+<img src="education-support-banner.jpg">
 <div class="card-body">
-<h3>🎓 Education Support Program</h3>
-<p>助学圆梦计划</p>
+<h3>🎓 Education Support Fund</h3>
+<p>助学基金与学生教育支持项目</p>
 <ul>
-<li>Scholarship support</li>
-<li>Books and learning materials</li>
-<li>Mentorship and tutoring</li>
-<li>Youth growth opportunities</li>
+<li>Scholarships for students in need</li>
+<li>Books, learning materials and technology</li>
+<li>Tutoring, mentorship and growth opportunities</li>
 </ul>
-<a class="btn" href="donate.html">Support This Program</a>
+<a class="btn" href="education-support.html">Learn More & Support</a>
 </div>
 </div>
 
 <div class="card">
-<img src="culture-banner.jpg">
+<img src="cultural-heritage-banner.jpg">
 <div class="card-body">
 <h3>🏮 Cultural Heritage Program</h3>
-<p>文化传承计划</p>
+<p>中华文化传承与国际文化交流项目</p>
 <ul>
-<li>Chinese cultural education</li>
-<li>Traditional arts and festivals</li>
-<li>Language and literature programs</li>
-<li>Intergenerational cultural connection</li>
+<li>Traditional culture events</li>
+<li>Calligraphy, porcelain, arts and publishing</li>
+<li>Cross-cultural education and community programs</li>
 </ul>
-<a class="btn" href="donate.html">Support This Program</a>
+<a class="btn" href="cultural-heritage.html">Learn More & Support</a>
 </div>
 </div>
 
 <div class="card">
-<img src="hero-banner.jpg">
+<img src="community-service-banner.jpg">
 <div class="card-body">
 <h3>❤️ Community Service Program</h3>
-<p>社区关爱计划</p>
+<p>社区关爱与困难家庭支持项目</p>
 <ul>
-<li>Support for families in need</li>
+<li>Family assistance and food support</li>
 <li>Community service events</li>
-<li>Youth and family assistance</li>
-<li>Volunteer-led outreach projects</li>
+<li>Youth, seniors and new immigrant support</li>
 </ul>
-<a class="btn" href="donate.html">Support This Program</a>
+<a class="btn" href="community-service.html">Learn More & Support</a>
 </div>
 </div>
 
 <div class="card">
-<img src="donate-banner.jpg">
+<img src="animal-rescue-banner.jpg">
 <div class="card-body">
-<h3>🐶 Animal Rescue Fund</h3>
-<p>宠物救助基金</p>
+<h3>🐾 Animal Rescue Fund</h3>
+<p>动物救助与流浪猫狗关爱基金</p>
 <ul>
-<li>Animal rescue support</li>
-<li>Adoption awareness</li>
-<li>Pet medical assistance</li>
-<li>Compassionate community care</li>
+<li>Animal rescue and medical care</li>
+<li>Food, shelter and foster support</li>
+<li>Adoption awareness and community education</li>
 </ul>
-<a class="btn" href="donate.html">Support This Program</a>
+<a class="btn" href="animal-rescue.html">Learn More & Support</a>
 </div>
 </div>
 
 <div class="card">
-<img src="hero-banner.jpg">
+<img src="emergency-relief-banner.jpg">
 <div class="card-body">
 <h3>🚨 Emergency Relief Fund</h3>
-<p>紧急援助基金</p>
+<p>紧急援助与突发困难家庭支持基金</p>
 <ul>
 <li>Emergency family assistance</li>
-<li>Medical hardship support</li>
-<li>Disaster and crisis response</li>
-<li>Special need community aid</li>
+<li>Medical hardship and crisis support</li>
+<li>Disaster and special-need relief</li>
 </ul>
-<a class="btn" href="donate.html">Support This Program</a>
+<a class="btn" href="emergency-relief.html">Learn More & Support</a>
 </div>
 </div>
 
-</div>
-</section>
-
-<section class="section" style="background:#f1eee8">
-<div class="feature">
-<img src="hero-banner.jpg">
-<div>
-<h2>Programs With Real Community Value</h2>
-<p>
-Our programs are designed to meet real needs in education, senior care, cultural preservation, and community service.
-</p>
-<p>
-Every act of kindness becomes part of a larger effort to bring dignity, hope, and support to families and communities.
-</p>
-<a class="btn" href="volunteer.html">Become a Volunteer</a>
-</div>
-</div>
-</section>
-
-<section class="section impact">
-<div class="title">
-<h2>Program Impact</h2>
-<p>项目影响力</p>
-</div>
-
-<div class="grid">
-<div class="box">
-<h3>10,000+</h3>
-<p>Families Helped</p>
-</div>
-
-<div class="box">
-<h3>5,000+</h3>
-<p>Students Supported</p>
-</div>
-
-<div class="box">
-<h3>20,000+</h3>
-<p>Community Participants</p>
-</div>
-
-<div class="box">
-<h3>1,000+</h3>
-<p>Volunteers</p>
-</div>
-</div>
-</section>
-
-<section class="section">
-<div class="title">
-<h2>How You Can Help</h2>
-<p>您可以怎样参与</p>
-</div>
-
-<div class="grid">
-<div class="card">
-<div class="card-body">
-<h3>💛 Donate</h3>
-<p>Your donation directly supports programs that serve seniors, students, families, and communities.</p>
-<a class="btn" href="donate.html">Donate Now</a>
-</div>
-</div>
-
-<div class="card">
-<div class="card-body">
-<h3>🤝 Volunteer</h3>
-<p>Join our volunteer team and serve through education, culture, senior care, and community outreach.</p>
-<a class="btn" href="volunteer.html">Join Us</a>
-</div>
-</div>
-
-<div class="card">
-<div class="card-body">
-<h3>🏢 Partner</h3>
-<p>Organizations, schools, artists, businesses, and community groups are welcome to collaborate with us.</p>
-<a class="btn" href="contact.html">Contact Us</a>
-</div>
-</div>
 </div>
 </section>
 
 <section class="section cta">
 <h2>Together We Care. Together We Change Lives.</h2>
-<p>携手奉献爱心，共同改变生命。</p>
+<p>每一个项目，都是一次真实的帮助；每一份捐赠，都是一次生命的改变。</p>
 <a class="btn" href="donate.html">Support Our Programs</a>
+<a class="btn" href="volunteer.html">Become a Volunteer</a>
 </section>
 
 <footer>
