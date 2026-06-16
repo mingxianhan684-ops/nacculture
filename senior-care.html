@@ -1,1 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>老年护理项目 | NACCF</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.8}
+a{text-decoration:none;color:inherit}
+header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.92);padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;color:white}
+.logo img{width:58px;height:58px;border-radius:50%;background:white;object-fit:cover}
+.logo strong{display:block;font-size:24px}
+.logo span{display:block;font-size:12px;color:#ddd}
+nav a{color:white;margin-left:22px;font-size:14px;font-weight:bold}
+nav a:hover{color:#d4af37}
 
+.hero{min-height:78vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.68)),url("senior-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 70px}
+.hero h1{font-size:62px;color:white;text-shadow:0 4px 20px #000;margin-bottom:12px}
+.hero h2{font-size:34px;color:#d4af37;margin-bottom:18px}
+.hero p{font-size:22px;color:white;max-width:900px;margin:auto}
+
+.section{padding:90px 8%}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.story img{width:100%;border-radius:26px;box-shadow:0 15px 40px rgba(0,0,0,.18)}
+.story h2{font-size:40px;color:#7a1f1f;margin-bottom:18px}
+.story p{font-size:19px;color:#555;margin-bottom:16px}
+
+.title{text-align:center;margin-bottom:50px}
+.title h2{font-size:44px;color:#7a1f1f;margin-bottom:10px}
+.title p{font-size:20px;color:#666}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{background:white;border-radius:22px;padding:34px;box-shadow:0 12px 35px rgba(0,0,0,.1)}
+.card h3{font-size:26px;color:#7a1f1f;margin-bottom:14px}
+.card p,.card li{font-size:17px;color:#555}
+.card ul{padding-left:22px}
+
+.impact{background:#111;color:white}
+.impact .title h2{color:#d4af37}
+.impact .title p{color:#ddd}
+.impact .card{background:#1e1e1e;text-align:center}
+.impact .card h3{font-size:42px;color:#d4af37}
+.impact .card p{color:#eee}
+
+.donate{background:#7a1f1f;color:white;text-align:center}
+.donate h2{font-size:44px;margin-bottom:18px}
+.donate p{font-size:20px;max-width:850px;margin:0 auto 30px}
+.btn{display:inline-block;background:#d4af37;color:white;padding:15px 36px;border-radius:50px;font-weight:bold;margin:8px}
+.btn.dark{background:#111}
+
+footer{background:#111;color:white;text-align:center;padding:50px 8%}
+@media(max-width:850px){
+nav{display:none}
+.logo span{display:none}
+.hero h1{font-size:40px}
+.story{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="logo.png.jpg">
+<div>
+<strong>NACCF</strong>
+<span>北美华人文化基金会</span>
+</div>
+</div>
+<nav>
+<a href="index.html">首页</a>
+<a href="about.html">关于</a>
+<a href="programs.html">项目</a>
+<a href="volunteer.html">志愿</a>
+<a href="news.html">新闻</a>
+<a href="donate.html">捐赠</a>
+<a href="contact.html">联系方式</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>老年护理项目</h1>
+<h2>Senior Care Program</h2>
+<p>今天的老人，就是明天的我们。让陪伴、尊严与关爱，重新回到每一位长者身边。</p>
+</div>
+</section>
+
+<section class="section">
+<div class="story">
+<img src="senior-banner.jpg">
+<div>
+<h2>让晚年不再孤单</h2>
+<p>许多老人生活在孤独、疾病、语言障碍和经济压力之中。他们需要的不只是物质帮助，更需要陪伴、尊重和被看见。</p>
+<p>北美华人文化基金会通过老年护理项目，为社区长者提供节日关怀、生活慰问、陪伴探访、健康支持和紧急援助。</p>
+<p>我们相信，一个真正温暖的社区，不会忘记曾经为家庭和社会付出一生的老人。</p>
+</div>
+</div>
+</section>
+
+<section class="section" style="background:#f1eee8">
+<div class="title">
+<h2>您的捐款将用于</h2>
+<p>Your donation will support</p>
+</div>
+
+<div class="grid">
+<div class="card"><h3>👴 长者探访</h3><p>组织志愿者探访独居老人，提供陪伴、问候和基本协助。</p></div>
+<div class="card"><h3>🎁 节日关怀包</h3><p>为老人准备食品、生活用品、节日礼品和温暖问候。</p></div>
+<div class="card"><h3>🏥 健康支持</h3><p>协助老人获得健康信息、社区资源和必要的医疗转介。</p></div>
+<div class="card"><h3>🥘 餐食援助</h3><p>支持困难老人获得日常餐食、营养补给和生活必需品。</p></div>
+<div class="card"><h3>🚗 出行协助</h3><p>在能力范围内帮助老人解决就医、购物和社区活动交通问题。</p></div>
+<div class="card"><h3>❤️ 紧急援助</h3><p>为突发困难、疾病或生活危机中的老人提供及时帮助。</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="title">
+<h2>为什么这个项目重要？</h2>
+<p>Why this program matters</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>因为老人需要被看见</h3>
+<p>许多老人沉默地承受孤独和困难。一次探访、一通电话、一份关怀，都可能成为他们生活里的光。</p>
+</div>
+
+<div class="card">
+<h3>因为尊严不该被遗忘</h3>
+<p>关爱老人，不是施舍，而是对生命经验、家庭贡献和社会记忆的尊重。</p>
+</div>
+
+<div class="card">
+<h3>因为每个人都会老去</h3>
+<p>今天我们如何对待老人，就是未来社会如何对待我们的样子。</p>
+</div>
+</div>
+</section>
+
+<section class="section impact">
+<div class="title">
+<h2>项目目标</h2>
+<p>Our Goals</p>
+</div>
+
+<div class="grid">
+<div class="card"><h3>10,000+</h3><p>长者关怀服务</p></div>
+<div class="card"><h3>3,000+</h3><p>节日关怀包</p></div>
+<div class="card"><h3>1,500+</h3><p>志愿探访小时</p></div>
+<div class="card"><h3>500+</h3><p>紧急援助家庭</p></div>
+</div>
+</section>
+
+<section class="section donate">
+<h2>支持老年护理项目</h2>
+<p>您的每一份善意，都可能让一位老人多一份安心、多一份尊严、多一份温暖。</p>
+<a class="btn" href="donate.html">立即捐款 Donate Now</a>
+<a class="btn dark" href="volunteer.html">成为志愿者</a>
+<a class="btn dark" href="programs.html">返回项目页</a>
+</section>
+
+<footer>
+<h3>North America Chinese Culture Foundation</h3>
+<p>北美华人文化基金会</p>
+<p>Houston, Texas, USA</p>
+<p>info@nacculture.org</p>
+<p>www.nacculture.org</p>
+<br>
+<p>© 2026 North America Chinese Culture Foundation. All Rights Reserved.</p>
+<p>501(c)(3) Application Pending</p>
+</footer>
+
+</body>
+</html>
