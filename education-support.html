@@ -1,1 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>助学基金 | NACCF</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.8}
+a{text-decoration:none;color:inherit}
+header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.92);padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;color:white}
+.logo img{width:58px;height:58px;border-radius:50%;background:white;object-fit:cover}
+.logo strong{display:block;font-size:24px}
+.logo span{display:block;font-size:12px;color:#ddd}
+nav a{color:white;margin-left:22px;font-size:14px;font-weight:bold}
+nav a:hover{color:#d4af37}
 
+.hero{min-height:78vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.68)),url("education-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 70px}
+.hero h1{font-size:62px;color:white;text-shadow:0 4px 20px #000;margin-bottom:12px}
+.hero h2{font-size:34px;color:#d4af37;margin-bottom:18px}
+.hero p{font-size:22px;color:white;max-width:900px;margin:auto}
+
+.section{padding:90px 8%}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.story img{width:100%;border-radius:26px;box-shadow:0 15px 40px rgba(0,0,0,.18)}
+.story h2{font-size:40px;color:#7a1f1f;margin-bottom:18px}
+.story p{font-size:19px;color:#555;margin-bottom:16px}
+
+.title{text-align:center;margin-bottom:50px}
+.title h2{font-size:44px;color:#7a1f1f;margin-bottom:10px}
+.title p{font-size:20px;color:#666}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{background:white;border-radius:22px;padding:34px;box-shadow:0 12px 35px rgba(0,0,0,.1)}
+.card h3{font-size:26px;color:#7a1f1f;margin-bottom:14px}
+.card p,.card li{font-size:17px;color:#555}
+.card ul{padding-left:22px}
+
+.impact{background:#111;color:white}
+.impact .title h2{color:#d4af37}
+.impact .title p{color:#ddd}
+.impact .card{background:#1e1e1e;text-align:center}
+.impact .card h3{font-size:42px;color:#d4af37}
+.impact .card p{color:#eee}
+
+.donate{background:#7a1f1f;color:white;text-align:center}
+.donate h2{font-size:44px;margin-bottom:18px}
+.donate p{font-size:20px;max-width:850px;margin:0 auto 30px}
+.btn{display:inline-block;background:#d4af37;color:white;padding:15px 36px;border-radius:50px;font-weight:bold;margin:8px}
+.btn.dark{background:#111}
+
+footer{background:#111;color:white;text-align:center;padding:50px 8%}
+@media(max-width:850px){
+nav{display:none}
+.logo span{display:none}
+.hero h1{font-size:40px}
+.story{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="logo.png.jpg">
+<div>
+<strong>NACCF</strong>
+<span>北美中华文化基金会</span>
+</div>
+</div>
+<nav>
+<a href="index.html">首页</a>
+<a href="about.html">关于</a>
+<a href="programs.html">项目</a>
+<a href="volunteer.html">志愿</a>
+<a href="news.html">新闻</a>
+<a href="donate.html">捐赠</a>
+<a href="contact.html">联系方式</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>助学基金</h1>
+<h2>Education Support Fund</h2>
+<p>帮助经济困难学生继续读书，让每一个孩子都有机会通过教育改变未来。</p>
+</div>
+</section>
+
+<section class="section">
+<div class="story">
+<img src="education-banner.jpg">
+<div>
+<h2>教育，是改变命运的机会</h2>
+<p>有些学生不是不努力，而是缺少继续前进的条件。</p>
+<p>他们可能需要一本教材、一台电脑、一笔考试费、一份学费帮助，或者一次被看见、被支持的机会。</p>
+<p>北美中华文化基金会设立助学基金，是希望帮助经济困难学生继续完成学业，获得更公平的发展机会。</p>
+<p>帮助一个学生，不只是帮助一个人，也是在帮助一个家庭，看见一个更有希望的未来。</p>
+</div>
+</div>
+</section>
+
+<section class="section" style="background:#f1eee8">
+<div class="title">
+<h2>您的捐款将用于</h2>
+<p>Your donation will support students in need</p>
+</div>
+
+<div class="grid">
+<div class="card"><h3>🎓 奖学金资助</h3><p>帮助经济困难但努力上进的学生继续完成学业。</p></div>
+<div class="card"><h3>📚 图书与教材</h3><p>购买课本、参考书、阅读材料和学习用品。</p></div>
+<div class="card"><h3>💻 学习设备</h3><p>支持学生获得电脑、平板、网络和基础学习工具。</p></div>
+<div class="card"><h3>📝 考试与申请费用</h3><p>帮助学生承担考试费、申请费、材料费等学习相关开支。</p></div>
+<div class="card"><h3>👨‍🏫 学习辅导</h3><p>支持课后辅导、导师陪伴和成长指导。</p></div>
+<div class="card"><h3>🌎 成长机会</h3><p>支持学生参与夏令营、文化交流、志愿服务和领导力项目。</p></div>
+</div>
+</section>
+
+<section class="section">
+<div class="title">
+<h2>为什么这个项目重要？</h2>
+<p>Why this program matters</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>因为贫困不该阻挡梦想</h3>
+<p>很多学生拥有能力和梦想，却因为经济压力无法获得足够的学习资源。一次帮助，可能成为他们继续前进的力量。</p>
+</div>
+
+<div class="card">
+<h3>因为教育改变家庭</h3>
+<p>一个学生获得教育机会，往往会影响整个家庭的未来。教育是最长期、最有价值的公益投资。</p>
+</div>
+
+<div class="card">
+<h3>因为每一份支持都有意义</h3>
+<p>无论是一笔奖学金、一套教材，还是一台电脑，都可能成为孩子人生路上的关键转折点。</p>
+</div>
+</div>
+</section>
+
+<section class="section" style="background:#fff">
+<div class="title">
+<h2>一个值得支持的梦想</h2>
+<p>A Dream Worth Supporting</p>
+</div>
+
+<div class="card" style="max-width:1000px;margin:auto">
+<p>每一个孩子都值得拥有梦想，也值得拥有追求梦想的机会。</p>
+<p>对于一些家庭来说，一台电脑可能是一笔沉重的开支；一本教材可能需要反复借阅；一次培训机会可能因为经济原因而错过。</p>
+<p>然而，对学生而言，这些资源可能成为他们进入大学、获得奖学金、学习新技能、改变人生道路的重要起点。</p>
+<p>助学基金的意义，就是在孩子最需要的时候，给他们一份看得见的支持。</p>
+</div>
+</section>
+
+<section class="section impact">
+<div class="title">
+<h2>项目目标</h2>
+<p>Our Goals</p>
+</div>
+
+<div class="grid">
+<div class="card"><h3>5,000+</h3><p>Students Supported</p></div>
+<div class="card"><h3>2,000+</h3><p>Scholarships</p></div>
+<div class="card"><h3>10,000+</h3><p>Books Distributed</p></div>
+<div class="card"><h3>500+</h3><p>Volunteer Mentors</p></div>
+</div>
+</section>
+
+<section class="section donate">
+<h2>支持助学基金</h2>
+<p>帮助一个学生，就是帮助一个家庭。支持教育，就是投资未来。</p>
+<a class="btn" href="donate.html">立即捐款 Donate Now</a>
+<a class="btn dark" href="volunteer.html">成为志愿者</a>
+<a class="btn dark" href="programs.html">返回项目页</a>
+</section>
+
+<footer>
+<h3>North America Chinese Culture Foundation</h3>
+<p>北美中华文化基金会</p>
+<p>Houston, Texas, USA</p>
+<p>info@nacculture.org</p>
+<p>www.nacculture.org</p>
+<br>
+<p>© 2026 North America Chinese Culture Foundation. All Rights Reserved.</p>
+<p>501(c)(3) Application Pending</p>
+</footer>
+
+</body>
+</html>
