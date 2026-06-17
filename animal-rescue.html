@@ -4,10 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>动物救助基金 | NACCF</title>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.8}
 a{text-decoration:none;color:inherit}
+
 header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.92);padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
 .logo{display:flex;align-items:center;gap:12px;color:white}
 .logo img{width:58px;height:58px;border-radius:50%;background:white;object-fit:cover}
@@ -16,45 +18,64 @@ header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,
 nav a{color:white;margin-left:22px;font-size:14px;font-weight:bold}
 nav a:hover{color:#d4af37}
 
-.hero{min-height:78vh;background:linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.68)),url("animal-rescue-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 70px}
-.hero h1{font-size:62px;color:white;text-shadow:0 4px 20px #000;margin-bottom:12px}
+.hero{
+min-height:86vh;
+background:
+linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.62)),
+url("animal-rescue-banner.jpg.jpg");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:150px 8% 90px;
+}
+.hero h1{font-size:66px;color:white;text-shadow:0 5px 22px #000;margin-bottom:10px}
 .hero h2{font-size:34px;color:#d4af37;margin-bottom:18px}
-.hero p{font-size:22px;color:white;max-width:900px;margin:auto}
+.hero p{font-size:22px;color:white;max-width:900px;margin:0 auto 28px}
+.btn{display:inline-block;background:#d4af37;color:white;padding:15px 38px;border-radius:50px;font-weight:bold;margin:8px;min-width:190px;text-align:center}
+.btn.dark{background:#111}
 
 .section{padding:90px 8%}
-.title{text-align:center;margin-bottom:50px}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center}
+.story img{width:100%;border-radius:26px;box-shadow:0 16px 42px rgba(0,0,0,.2)}
+.story h2{font-size:42px;color:#7a1f1f;margin-bottom:18px}
+.story p{font-size:19px;color:#555;margin-bottom:16px}
+
+.title{text-align:center;margin-bottom:52px}
 .title h2{font-size:44px;color:#7a1f1f;margin-bottom:10px}
 .title p{font-size:20px;color:#666}
 
-.story{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.story img{width:100%;border-radius:26px;box-shadow:0 15px 40px rgba(0,0,0,.18)}
-.story h2{font-size:40px;color:#7a1f1f;margin-bottom:18px}
-.story p{font-size:19px;color:#555;margin-bottom:16px}
-
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
-.card{background:white;border-radius:22px;padding:34px;box-shadow:0 12px 35px rgba(0,0,0,.1)}
+.card{background:white;border-radius:24px;padding:34px;box-shadow:0 12px 35px rgba(0,0,0,.1)}
 .card h3{font-size:26px;color:#7a1f1f;margin-bottom:14px}
-.card p,.card li{font-size:17px;color:#555}
-.card ul{padding-left:22px}
+.card p{font-size:17px;color:#555}
 
-.impact{background:#111;color:white}
-.impact .title h2{color:#d4af37}
-.impact .title p{color:#ddd}
-.impact .card{background:#1e1e1e;text-align:center}
-.impact .card h3{font-size:42px;color:#d4af37}
-.impact .card p{color:#eee}
+.dark-section{background:#111;color:white}
+.dark-section .title h2{color:#d4af37}
+.dark-section .title p{color:#ddd}
+.dark-section .card{background:#1f1f1f;text-align:center}
+.dark-section .card h3{font-size:42px;color:#d4af37}
+.dark-section .card p{color:#eee}
+
+.quote{background:#fff;text-align:center}
+.quote-box{max-width:980px;margin:auto;background:white;border-left:8px solid #d4af37;padding:45px;border-radius:22px;box-shadow:0 12px 35px rgba(0,0,0,.1)}
+.quote-box h2{font-size:38px;color:#7a1f1f;margin-bottom:18px}
+.quote-box p{font-size:20px;color:#555}
 
 .donate{background:#7a1f1f;color:white;text-align:center}
-.donate h2{font-size:44px;margin-bottom:18px}
-.donate p{font-size:20px;max-width:850px;margin:0 auto 30px}
-.btn{display:inline-block;background:#d4af37;color:white;padding:15px 36px;border-radius:50px;font-weight:bold;margin:8px}
-.btn.dark{background:#111}
+.donate h2{font-size:46px;margin-bottom:18px}
+.donate p{font-size:21px;max-width:850px;margin:0 auto 30px}
 
-footer{background:#111;color:white;text-align:center;padding:50px 8%}
+footer{background:#111;color:white;text-align:center;padding:55px 8%}
+
 @media(max-width:850px){
 nav{display:none}
 .logo span{display:none}
-.hero h1{font-size:40px}
+.hero h1{font-size:42px}
+.hero h2{font-size:26px}
 .story{grid-template-columns:1fr}
 }
 </style>
@@ -67,9 +88,10 @@ nav{display:none}
 <img src="logo.png.jpg">
 <div>
 <strong>NACCF</strong>
-<span>北美华人文化基金会</span>
+<span>北美中华文化基金会</span>
 </div>
 </div>
+
 <nav>
 <a href="index.html">首页</a>
 <a href="about.html">关于</a>
@@ -86,17 +108,20 @@ nav{display:none}
 <h1>动物救助基金</h1>
 <h2>Animal Rescue Fund</h2>
 <p>每一个生命都值得被温柔守护。您的善意，可能就是它们重新活下去的希望。</p>
+<a class="btn" href="donate.html">立即捐款 Donate Now</a>
+<a class="btn dark" href="volunteer.html">成为志愿者</a>
 </div>
 </section>
 
 <section class="section">
 <div class="story">
-<img src="animal-rescue-banner.jpg">
+<img src="animal-rescue-banner.jpg.jpg">
 <div>
 <h2>一个生命，也值得被守护</h2>
-<p>在城市的角落里，有许多流浪猫狗正在等待帮助。它们可能需要一顿食物、一针疫苗、一次治疗，或者一个临时安身的地方。</p>
-<p>北美华人文化基金会希望通过动物救助基金，支持流浪动物救助、医疗援助、寄养安置和领养推广。</p>
-<p>我们相信，关爱弱小生命，也是建设温暖社区的一部分。</p>
+<p>在城市的角落里，有许多流浪猫狗正在经历饥饿、疾病、受伤和寒冷。</p>
+<p>它们不会说话，但它们同样会疼痛、会害怕，也会渴望被看见、被照顾、被温柔对待。</p>
+<p>北美中华文化基金会设立动物救助基金，希望为更多流浪动物提供医疗救助、食物补给、临时寄养、绝育支持和领养机会。</p>
+<p>您的每一次捐赠，都可能让一个受伤的生命重新获得希望。</p>
 </div>
 </div>
 </section>
@@ -104,60 +129,90 @@ nav{display:none}
 <section class="section" style="background:#f1eee8">
 <div class="title">
 <h2>您的捐款将用于</h2>
-<p>Your donation will support</p>
+<p>Your donation will support animal rescue work</p>
 </div>
 
 <div class="grid">
-<div class="card"><h3>🐾 流浪动物救助</h3><p>帮助受伤、饥饿、被遗弃的猫狗获得及时救助。</p></div>
-<div class="card"><h3>🏥 医疗救治</h3><p>用于疫苗、检查、手术、药品和紧急治疗。</p></div>
-<div class="card"><h3>🍲 食物与用品</h3><p>购买宠物食品、猫砂、牵引绳、笼具和基础用品。</p></div>
-<div class="card"><h3>🏡 临时寄养</h3><p>支持寄养家庭，为动物提供安全过渡空间。</p></div>
-<div class="card"><h3>💛 领养推广</h3><p>帮助动物找到长期、稳定、有爱的家庭。</p></div>
-<div class="card"><h3>📢 社区教育</h3><p>推广爱护动物、文明养宠和负责任领养理念。</p></div>
+<div class="card">
+<h3>🏥 医疗救助</h3>
+<p>帮助受伤、患病的流浪动物获得检查、治疗、手术和药物支持。</p>
+</div>
+
+<div class="card">
+<h3>🍖 食物补给</h3>
+<p>为流浪猫狗提供基础食物、饮水和临时救助物资。</p>
+</div>
+
+<div class="card">
+<h3>🏠 临时寄养</h3>
+<p>支持寄养家庭、临时庇护和安全安置，避免动物继续流浪。</p>
+</div>
+
+<div class="card">
+<h3>🐾 绝育支持</h3>
+<p>帮助控制流浪动物数量，减少更多生命在街头受苦。</p>
+</div>
+
+<div class="card">
+<h3>❤️ 爱心领养</h3>
+<p>推动领养宣传，帮助被救助动物找到长期、稳定、温暖的家庭。</p>
+</div>
+
+<div class="card">
+<h3>📚 社区教育</h3>
+<p>开展动物保护、责任养宠、绝育意识和善待生命的公益宣传。</p>
+</div>
 </div>
 </section>
 
 <section class="section">
 <div class="title">
-<h2>我们为什么要做这个项目？</h2>
-<p>Why this program matters</p>
+<h2>为什么动物救助重要？</h2>
+<p>Why animal rescue matters</p>
 </div>
 
 <div class="grid">
 <div class="card">
-<h3>因为它们不会说话</h3>
-<p>许多动物在受伤、饥饿、寒冷和恐惧中无法表达自己的痛苦。人类的一次帮助，可能改变它们的一生。</p>
+<h3>因为生命不该被遗弃</h3>
+<p>许多流浪动物曾经也有家。救助它们，是对生命最基本的尊重。</p>
 </div>
 
 <div class="card">
-<h3>因为社区需要善意</h3>
-<p>动物救助不仅是帮助动物，也是培养孩子、家庭和社区的同理心与责任感。</p>
+<h3>因为救助也是社区文明</h3>
+<p>善待动物的社区，往往也更懂得关心弱者、尊重生命、传递温暖。</p>
 </div>
 
 <div class="card">
-<h3>因为每一份爱都有效</h3>
-<p>无论是一小笔捐款、一袋粮食，还是一次志愿服务，都能成为真实的帮助。</p>
+<h3>因为一次帮助可以改变一生</h3>
+<p>一顿饭、一针疫苗、一次手术、一个领养机会，都可能改变一个生命的结局。</p>
 </div>
 </div>
 </section>
 
-<section class="section impact">
+<section class="section quote">
+<div class="quote-box">
+<h2>Every Life Deserves Love</h2>
+<p>每一个生命都值得被爱。您的善意，不只是一次捐赠，而是一次重新点亮生命的机会。</p>
+</div>
+</section>
+
+<section class="section dark-section">
 <div class="title">
 <h2>项目目标</h2>
 <p>Our Goals</p>
 </div>
 
 <div class="grid">
-<div class="card"><h3>12,800+</h3><p>Animal Rescue Support</p></div>
-<div class="card"><h3>8,600+</h3><p>Medical Assistance</p></div>
+<div class="card"><h3>12,800+</h3><p>Animals Rescued</p></div>
+<div class="card"><h3>8,600+</h3><p>Medical Treatments</p></div>
 <div class="card"><h3>350,000+</h3><p>Meals Provided</p></div>
-<div class="card"><h3>5,200+</h3><p>Community Supporters</p></div>
+<div class="card"><h3>5,200+</h3><p>Adoption Support</p></div>
 </div>
 </section>
 
 <section class="section donate">
-<h2>立即支持动物救助基金</h2>
-<p>您的每一次捐赠，都可能让一个弱小生命重新获得安全、温暖和希望。</p>
+<h2>支持动物救助基金</h2>
+<p>您的支持，可能就是一个小生命重新活下去的机会。</p>
 <a class="btn" href="donate.html">立即捐款 Donate Now</a>
 <a class="btn dark" href="volunteer.html">成为志愿者</a>
 <a class="btn dark" href="programs.html">返回项目页</a>
@@ -165,7 +220,7 @@ nav{display:none}
 
 <footer>
 <h3>North America Chinese Culture Foundation</h3>
-<p>北美华人文化基金会</p>
+<p>北美中华文化基金会</p>
 <p>Houston, Texas, USA</p>
 <p>info@nacculture.org</p>
 <p>www.nacculture.org</p>
