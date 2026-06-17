@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>文化传承计划 | NACCF</title>
 
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.8}
+a{text-decoration:none;color:inherit}
+
+header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.92);padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;color:white}
+.logo img{width:58px;height:58px;border-radius:50%;background:white;object-fit:cover}
+.logo strong{display:block;font-size:24px}
+.logo span{display:block;font-size:12px;color:#ddd}
+nav a{color:white;margin-left:22px;font-size:14px;font-weight:bold}
+nav a:hover{color:#d4af37}
+
+.hero{min-height:78vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.68)),url("culture-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 70px}
+.hero h1{font-size:62px;color:white;text-shadow:0 4px 20px #000;margin-bottom:12px}
+.hero h2{font-size:34px;color:#d4af37;margin-bottom:18px}
+.hero p{font-size:22px;color:white;max-width:900px;margin:auto}
+
+.section{padding:90px 8%}
+.title{text-align:center;margin-bottom:50px}
+.title h2{font-size:44px;color:#7a1f1f;margin-bottom:10px}
+.title p{font-size:20px;color:#666}
+
+.story{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.story img{width:100%;border-radius:26px;box-shadow:0 15px 40px rgba(0,0,0,.18)}
+.story h2{font-size:40px;color:#7a1f1f;margin-bottom:18px}
+.story p{font-size:19px;color:#555;margin-bottom:16px}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{background:white;border-radius:22px;padding:34px;box-shadow:0 12px 35px rgba(0,0,0,.1)}
+.card h3{font-size:26px;color:#7a1f1f;margin-bottom:14px}
+.card p{font-size:17px;color:#555}
+
+.dark{background:#111;color:white}
+.dark .title h2{color:#d4af37}
+.dark .title p{color:#ddd}
+.dark .card{background:#1e1e1e;text-align:center}
+.dark .card h3{font-size:42px;color:#d4af37}
+.dark .card p{color:#eee}
+
+.donate{background:#7a1f1f;color:white;text-align:center}
+.donate h2{font-size:44px;margin-bottom:18px}
+.donate p{font-size:20px;max-width:850px;margin:0 auto 30px}
+.btn{display:inline-block;background:#d4af37;color:white;padding:15px 36px;border-radius:50px;font-weight:bold;margin:8px}
+.btn.black{background:#111}
+
+footer{background:#111;color:white;text-align:center;padding:50px 8%}
+
+@media(max-width:850px){
+nav{display:none}
+.logo span{display:none}
+.hero h1{font-size:40px}
+.story{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<img src="logo.png.jpg">
+<div>
+<strong>NACCF</strong>
+<span>北美中华文化基金会</span>
+</div>
+</div>
+
+<nav>
+<a href="index.html">首页</a>
+<a href="about.html">关于</a>
+<a href="programs.html">项目</a>
+<a href="volunteer.html">志愿</a>
+<a href="news.html">新闻</a>
+<a href="donate.html">捐赠</a>
+<a href="contact.html">联系方式</a>
+</nav>
+</header>
+
+<section class="hero">
+<div>
+<h1>文化传承计划</h1>
+<h2>Cultural Heritage Program</h2>
+<p>守护文化，温暖人心。让中华文化在北美社区继续传承与发光。</p>
+</div>
+</section>
+
+<section class="section">
+<div class="story">
+<img src="culture-banner.jpg">
+<div>
+<h2>文化，是一个民族的根</h2>
+<p>文化不仅是历史，更是一个民族的记忆、精神与身份。</p>
+<p>语言、书法、瓷器、绘画、戏曲、节日、书籍和礼仪，都承载着中华文明数千年的智慧。</p>
+<p>北美中华文化基金会希望通过文化传承计划，在北美社区推广中华优秀传统文化，促进不同族裔、不同文化之间的理解与交流。</p>
+<p>文化传承不是停留在过去，而是让下一代在新的土地上依然知道自己从哪里来，也知道未来可以走向哪里。</p>
+</div>
+</div>
+</section>
+
+<section class="section" style="background:#f1eee8">
+<div class="title">
+<h2>您的捐款将用于</h2>
+<p>Your donation will support cultural programs</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>🏮 传统文化活动</h3>
+<p>支持春节、中秋、端午等传统节日活动和社区文化庆典。</p>
+</div>
+
+<div class="card">
+<h3>🖌️ 书法与国画推广</h3>
+<p>举办书法、国画、篆刻、传统美学课程与展示活动。</p>
+</div>
+
+<div class="card">
+<h3>🏺 景德镇陶瓷文化</h3>
+<p>推广中国瓷器艺术、陶瓷历史和中外陶瓷文化交流。</p>
+</div>
+
+<div class="card">
+<h3>📚 出版与文化传播</h3>
+<p>支持中英文图书、文化资料、教育内容和公益出版项目。</p>
+</div>
+
+<div class="card">
+<h3>🎭 戏曲与传统艺术</h3>
+<p>支持戏曲、民乐、舞蹈、传统服饰及非遗文化展示。</p>
+</div>
+
+<div class="card">
+<h3>🌏 国际文化交流</h3>
+<p>推动中美文化交流、青年文化项目和跨文化对话活动。</p>
+</div>
+</div>
+</section>
+
+<section class="section">
+<div class="title">
+<h2>为什么这个项目重要？</h2>
+<p>Why this program matters</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>因为文化不能断代</h3>
+<p>如果文化失去了传承，下一代将失去根。文化教育让孩子们理解语言、历史和身份。</p>
+</div>
+
+<div class="card">
+<h3>因为交流能减少隔阂</h3>
+<p>文化交流能够让不同背景的人彼此理解，减少偏见，建立尊重与友谊。</p>
+</div>
+
+<div class="card">
+<h3>因为艺术连接心灵</h3>
+<p>书法、瓷器、音乐、戏曲和文学能够跨越语言，让人们感受共同的人性与美。</p>
+</div>
+</div>
+</section>
+
+<section class="section" style="background:#fff">
+<div class="title">
+<h2>文化项目展示</h2>
+<p>Program Highlights</p>
+</div>
+
+<div class="grid">
+<div class="card">
+<h3>🏺 瓷器艺术展</h3>
+<p>展示中国陶瓷艺术之美，介绍景德镇瓷器文化和中外交流历史。</p>
+</div>
+
+<div class="card">
+<h3>📖 文化出版项目</h3>
+<p>支持中英文文化书籍、青少年文化读本和社区教育材料出版。</p>
+</div>
+
+<div class="card">
+<h3>🎨 青少年文化课堂</h3>
+<p>为青少年提供书法、中文、艺术、历史和传统节日教育课程。</p>
+</div>
+</div>
+</section>
+
+<section class="section dark">
+<div class="title">
+<h2>项目目标</h2>
+<p>Our Goals</p>
+</div>
+
+<div class="grid">
+<div class="card"><h3>100+</h3><p>Cultural Events</p></div>
+<div class="card"><h3>50,000+</h3><p>Participants</p></div>
+<div class="card"><h3>500+</h3><p>Artists & Scholars</p></div>
+<div class="card"><h3>20+</h3><p>Publishing Projects</p></div>
+</div>
+</section>
+
+<section class="section donate">
+<h2>支持文化传承计划</h2>
+<p>您的支持，将帮助中华文化在北美社区继续传承、传播与发展。</p>
+<a class="btn" href="donate.html">立即捐款 Donate Now</a>
+<a class="btn black" href="volunteer.html">成为志愿者</a>
+<a class="btn black" href="programs.html">返回项目页</a>
+</section>
+
+<footer>
+<h3>North America Chinese Culture Foundation</h3>
+<p>北美中华文化基金会</p>
+<p>Houston, Texas, USA</p>
+<p>info@nacculture.org</p>
+<p>www.nacculture.org</p>
+<br>
+<p>© 2026 North America Chinese Culture Foundation. All Rights Reserved.</p>
+<p>501(c)(3) Application Pending</p>
+</footer>
+
+</body>
+</html>
