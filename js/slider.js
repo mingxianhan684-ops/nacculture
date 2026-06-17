@@ -1,32 +1,43 @@
-// NACCF Homepage Slider
+// NACCF Hero Slider
 
-const slides = document.querySelectorAll(".hero-slide");
-const dots = document.querySelectorAll(".slider-dot");
+document.addEventListener("DOMContentLoaded", function(){
 
-let currentSlide = 0;
+  const slides = document.querySelectorAll(".hero-slide");
+  const dots = document.querySelectorAll(".slider-dot");
 
-function showSlide(index){
-  slides.forEach(slide => slide.classList.remove("active"));
-  dots.forEach(dot => dot.classList.remove("active"));
+  if(slides.length === 0) return;
 
-  slides[index].classList.add("active");
-  dots[index].classList.add("active");
+  let currentSlide = 0;
 
-  currentSlide = index;
-}
+  function showSlide(index){
+    slides.forEach(slide => slide.classList.remove("active"));
+    dots.forEach(dot => dot.classList.remove("active"));
 
-function nextSlide(){
-  currentSlide++;
-  if(currentSlide >= slides.length){
-    currentSlide = 0;
+    slides[index].classList.add("active");
+
+    if(dots[index]){
+      dots[index].classList.add("active");
+    }
+
+    currentSlide = index;
   }
-  showSlide(currentSlide);
-}
 
-dots.forEach((dot,index)=>{
-  dot.addEventListener("click",()=>{
-    showSlide(index);
+  function nextSlide(){
+    currentSlide = currentSlide + 1;
+
+    if(currentSlide >= slides.length){
+      currentSlide = 0;
+    }
+
+    showSlide(currentSlide);
+  }
+
+  dots.forEach((dot,index)=>{
+    dot.addEventListener("click", function(){
+      showSlide(index);
+    });
   });
-});
 
-setInterval(nextSlide,5000);
+  setInterval(nextSlide, 4000);
+
+});
