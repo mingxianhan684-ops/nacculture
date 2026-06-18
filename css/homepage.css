@@ -28,14 +28,32 @@ background:rgba(0,0,0,.45);
 }
 
 .hero-content{
-position:absolute;
-top:72%;
-left:50%;
-transform:translate(-50%,-50%);
-text-align:center;
-color:#fff;
-z-index:5;
-width:90%;
+.hero-content{
+
+    position:absolute;
+
+    top:65%;
+
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:80%;
+
+    max-width:900px;
+
+    text-align:center;
+
+    z-index:20;
+
+    background:rgba(0,0,0,.35);
+
+    padding:35px 45px;
+
+    border-radius:20px;
+
+    backdrop-filter:blur(8px);
+
 }
 
 .hero-content h1{
