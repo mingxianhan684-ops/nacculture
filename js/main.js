@@ -1,33 +1,11 @@
-// NACCF Main JavaScript
-
 // Back to Top
 const backTop = document.querySelector(".back-top");
 
 if(backTop){
   backTop.addEventListener("click",()=>{
-    window.scrollTo({
-      top:0,
-      behavior:"smooth"
-    });
+    window.scrollTo({top:0, behavior:"smooth"});
   });
 }
-
-// Scroll Reveal Animation
-const revealItems = document.querySelectorAll(".reveal");
-
-function revealOnScroll(){
-  revealItems.forEach(item=>{
-    const itemTop = item.getBoundingClientRect().top;
-    const windowHeight = window.innerHeight;
-
-    if(itemTop < windowHeight - 80){
-      item.classList.add("active");
-    }
-  });
-}
-
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("load", revealOnScroll);
 
 // Number Counter
 const counters = document.querySelectorAll(".counter");
@@ -47,7 +25,6 @@ function runCounters(){
         counter.innerText = target.toLocaleString();
       }
     }
-
     update();
   });
 }
@@ -58,16 +35,13 @@ window.addEventListener("scroll",()=>{
   const impact = document.querySelector(".impact-section");
   if(!impact || counterStarted) return;
 
-  const position = impact.getBoundingClientRect().top;
-  if(position < window.innerHeight - 100){
+  if(impact.getBoundingClientRect().top < window.innerHeight - 100){
     runCounters();
     counterStarted = true;
   }
 });
 
 // Language Switch
-
-// NACCF Language Switch
 const langBtn = document.getElementById("lang-btn");
 
 let currentLang = localStorage.getItem("naccf_lang") || "en";
@@ -96,7 +70,7 @@ const translations = {
 function applyLanguage(lang){
   document.querySelectorAll("[data-i18n]").forEach(el=>{
     const key = el.getAttribute("data-i18n");
-    if(translations[lang][key]){
+    if(translations[lang] && translations[lang][key]){
       el.innerHTML = translations[lang][key];
     }
   });
@@ -105,7 +79,7 @@ function applyLanguage(lang){
 }
 
 if(langBtn){
-  langBtn.addEventListener("click", function(){
+  langBtn.addEventListener("click",()=>{
     currentLang = currentLang === "en" ? "zh" : "en";
     applyLanguage(currentLang);
   });
