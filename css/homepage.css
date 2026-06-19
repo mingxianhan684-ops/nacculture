@@ -1,166 +1,222 @@
-/* ===========================
-   HERO 4.0 FINAL
-=========================== */
+<section class="mission-section reveal">
+  <div class="mission-text">
+    <h2>Our Mission</h2>
+    <h3>Culture · Education · Compassion · Community</h3>
+    <p>
+      North America Chinese Culture Foundation is dedicated to cultural heritage,
+      education support, senior care, animal rescue, emergency relief and community service.
+    </p>
+    <p>
+      北美中华文化基金会致力于文化传承、教育助学、敬老关怀、动物救助、
+      紧急援助与社区公益服务。
+    </p>
+    <a href="about.html" class="btn">Learn About Us</a>
+  </div>
 
-.hero-v4{
-position:relative;
-height:760px;
-overflow:hidden;
-background:#111;
-}
+  <div class="mission-image">
+    <img src="hero-banner.jpg" alt="">
+  </div>
+</section>
 
-.hero-v4 .hero-slide{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-opacity:0;
-transition:opacity 1.2s ease-in-out;
-}
+<section class="home-programs reveal">
+  <div class="programs-title">
+    <h2>Featured Programs</h2>
+    <p>六大公益项目</p>
+  </div>
 
-.hero-v4 .hero-slide.active{
-opacity:1;
-z-index:1;
-}
+  <div class="programs-grid">
 
-.hero-v4 .hero-slide img{
-width:100%;
-height:100%;
-object-fit:cover;
-object-position:center;
-}
+    <div class="home-program-card">
+      <img src="education-banner.jpg" alt="">
+      <div class="home-program-content">
+        <span>ACTIVE PROGRAM</span>
+        <h3>Education Support Fund</h3>
+        <p>助学基金，支持学生奖学金、教材、学习设备和成长机会。</p>
+        <div class="program-actions">
+          <a href="education-support.html" class="learn-btn">Learn More</a>
+          <a href="donate.html" class="donate-btn">Donate</a>
+        </div>
+      </div>
+    </div>
 
-.hero-dark-layer{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:linear-gradient(
-to bottom,
-rgba(0,0,0,.38),
-rgba(0,0,0,.30),
-rgba(0,0,0,.68)
-);
-z-index:3;
-}
+    <div class="home-program-card">
+      <img src="senior-banner.jpg" alt="">
+      <div class="home-program-content">
+        <span>ACTIVE PROGRAM</span>
+        <h3>Senior Care Program</h3>
+        <p>敬老关怀，支持老人探访、节日慰问、生活关爱与社区服务。</p>
+        <div class="program-actions">
+          <a href="senior-care.html" class="learn-btn">Learn More</a>
+          <a href="donate.html" class="donate-btn">Donate</a>
+        </div>
+      </div>
+    </div>
 
-.hero-panel{
-position:absolute;
-left:50%;
-top:68%;
-transform:translate(-50%,-50%);
-z-index:5;
-width:82%;
-max-width:980px;
-text-align:center;
-background:rgba(0,0,0,.38);
-padding:34px 44px;
-border-radius:22px;
-backdrop-filter:blur(8px);
-box-shadow:0 18px 45px rgba(0,0,0,.35);
-}
+    <div class="home-program-card">
+      <img src="culture-banner.jpg" alt="">
+      <div class="home-program-content">
+        <span>ACTIVE PROGRAM</span>
+        <h3>Cultural Heritage Program</h3>
+        <p>文化传承，推广中华文化、艺术、瓷器、书法和文化出版。</p>
+        <div class="program-actions">
+          <a href="cultural-heritage.html" class="learn-btn">Learn More</a>
+          <a href="donate.html" class="donate-btn">Donate</a>
+        </div>
+      </div>
+    </div>
 
-.hero-panel h1{
-font-size:58px;
-line-height:1.12;
-color:white;
-margin-bottom:14px;
-text-shadow:0 5px 18px rgba(0,0,0,.95);
-}
+    <div class="home-program-card">
+      <img src="hero-banner.jpg" alt="">
+      <div class="home-program-content">
+        <span>ACTIVE PROGRAM</span>
+        <h3>Community Service Program</h3>
+        <p>社区关爱，支持困难家庭、新移民、青少年和社区公益活动。</p>
+        <div class="program-actions">
+          <a href="community-service.html" class="learn-btn">Learn More</a>
+          <a href="donate.html" class="donate-btn">Donate</a>
+        </div>
+      </div>
+    </div>
 
-.hero-panel h2{
-font-size:30px;
-color:#d4af37;
-margin-bottom:12px;
-text-shadow:0 4px 12px rgba(0,0,0,.9);
-}
+    <div class="home-program-card">
+      <img src="animal-rescue-banner.jpg.jpg" alt="">
+      <div class="home-program-content">
+        <span>ACTIVE PROGRAM</span>
+        <h3>Animal Rescue Fund</h3>
+        <p>动物救助，支持流浪猫狗医疗、食物、寄养、绝育和领养。</p>
+        <div class="program-actions">
+          <a href="animal-rescue.html" class="learn-btn">Learn More</a>
+          <a href="donate.html" class="donate-btn">Donate</a>
+        </div>
+      </div>
+    </div>
 
-.hero-panel p{
-font-size:20px;
-color:white;
-max-width:850px;
-margin:0 auto 24px;
-line-height:1.6;
-text-shadow:0 3px 10px rgba(0,0,0,.9);
-}
+    <div class="home-program-card">
+      <img src="emergency-relief-banner.jpg.jpg" alt="">
+      <div class="home-program-content">
+        <span>ACTIVE PROGRAM</span>
+        <h3>Emergency Relief Fund</h3>
+        <p>紧急援助，支持突发困难、医疗压力、灾害和特殊家庭援助。</p>
+        <div class="program-actions">
+          <a href="emergency-relief.html" class="learn-btn">Learn More</a>
+          <a href="donate.html" class="donate-btn">Donate</a>
+        </div>
+      </div>
+    </div>
 
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:18px;
-flex-wrap:wrap;
-}
+  </div>
+</section>
 
-.hero-buttons a{
-display:inline-block;
-padding:14px 34px;
-border-radius:50px;
-font-weight:bold;
-transition:.3s;
-}
+<section class="impact-section reveal">
+  <h2>Our Impact</h2>
+  <p>Every act of kindness creates real change.</p>
 
-.hero-buttons .gold{
-background:#d4af37;
-color:white;
-}
+  <div class="impact-grid">
+    <div class="impact-card">
+      <h3 class="counter" data-target="10000">0</h3>
+      <span>Families Supported</span>
+    </div>
 
-.hero-buttons .white{
-border:2px solid white;
-color:white;
-}
+    <div class="impact-card">
+      <h3 class="counter" data-target="5000">0</h3>
+      <span>Students Assisted</span>
+    </div>
 
-.hero-buttons a:hover{
-transform:translateY(-3px);
-}
+    <div class="impact-card">
+      <h3 class="counter" data-target="12800">0</h3>
+      <span>Animals Helped</span>
+    </div>
 
-.slider-dots{
-position:absolute;
-left:50%;
-bottom:28px;
-transform:translateX(-50%);
-display:flex;
-gap:12px;
-z-index:8;
-}
+    <div class="impact-card">
+      <h3 class="counter" data-target="1000">0</h3>
+      <span>Volunteers</span>
+    </div>
+  </div>
+</section>
 
-.slider-dot{
-width:13px;
-height:13px;
-border-radius:50%;
-background:white;
-opacity:.45;
-cursor:pointer;
-transition:.3s;
-}
+<section class="news-section reveal">
+  <div class="section-title">
+    <h2>Latest News</h2>
+    <p>基金会最新动态</p>
+  </div>
 
-.slider-dot.active{
-background:#d4af37;
-opacity:1;
-transform:scale(1.2);
-}
+  <div class="news-grid">
+    <div class="news-card">
+      <img src="hero-banner.jpg" alt="">
+      <div class="news-content">
+        <small>June 2026</small>
+        <h3>Official Website Launch</h3>
+        <p>The official website of NACCF is now online.</p>
+      </div>
+    </div>
 
-@media(max-width:900px){
-.hero-v4{
-height:680px;
-}
+    <div class="news-card">
+      <img src="education-banner.jpg" alt="">
+      <div class="news-content">
+        <small>June 2026</small>
+        <h3>Education Support Program</h3>
+        <p>Supporting students with scholarships and learning resources.</p>
+      </div>
+    </div>
 
-.hero-panel{
-top:66%;
-width:90%;
-padding:26px 22px;
-}
+    <div class="news-card">
+      <img src="senior-banner.jpg" alt="">
+      <div class="news-content">
+        <small>June 2026</small>
+        <h3>Senior Care Program</h3>
+        <p>Bringing care, dignity and companionship to seniors.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-.hero-panel h1{
-font-size:36px;
-}
+<section class="home-cta reveal">
+  <h2>Together We Care.<br>Together We Change Lives.</h2>
+  <p>
+    Your kindness supports seniors, students, culture, animals,
+    families and communities.
+  </p>
 
-.hero-panel h2{
-font-size:24px;
-}
+  <div class="cta-buttons">
+    <a href="donate.html" class="cta-gold">Donate Now</a>
+    <a href="volunteer.html" class="cta-white">Become a Volunteer</a>
+  </div>
+</section>
 
-.hero-panel p{
-font-size:16px;
-}
-}
+<section class="sponsors-section reveal">
+  <div class="section-title">
+    <h2>Community Partners</h2>
+    <p>合作伙伴预留区域</p>
+  </div>
+
+  <div class="sponsor-grid">
+    <div class="sponsor-box">Education Partners</div>
+    <div class="sponsor-box">Community Partners</div>
+    <div class="sponsor-box">Cultural Partners</div>
+    <div class="sponsor-box">Corporate Sponsors</div>
+  </div>
+</section>
+
+<section class="newsletter reveal">
+  <h2>Stay Connected</h2>
+  <p>Subscribe to receive foundation news and community updates.</p>
+
+  <form class="newsletter-form">
+    <input type="email" placeholder="Enter your email">
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<footer>
+  <img src="logo.png.jpg" alt="">
+  <h3>North America Chinese Culture Foundation</h3>
+  <p>Houston, Texas, USA</p>
+  <p>info@nacculture.org</p>
+  <p>www.nacculture.org</p>
+  <br>
+  <p>© 2026 NACCF. All Rights Reserved.</p>
+  <p>501(c)(3) Application Pending</p>
+</footer>
+
+<a href="donate.html" class="floating-donate">Donate</a>
+<div class="back-top">↑</div>
