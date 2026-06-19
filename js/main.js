@@ -64,3 +64,46 @@ window.addEventListener("scroll",()=>{
     counterStarted = true;
   }
 });
+
+// Language Switch
+const langBtn = document.getElementById("lang-btn");
+
+let currentLang = localStorage.getItem("naccf_lang") || "en";
+
+const translations = {
+  en: {
+    missionTitle: "Our Mission",
+    missionSub: "Culture · Education · Compassion · Community",
+    programsTitle: "Featured Programs",
+    programsSub: "Six major programs serving the community",
+    impactTitle: "Our Impact",
+    newsTitle: "Latest News"
+  },
+  zh: {
+    missionTitle: "我们的使命",
+    missionSub: "文化 · 教育 · 关爱 · 社区",
+    programsTitle: "公益项目",
+    programsSub: "六大公益项目服务社区",
+    impactTitle: "公益影响力",
+    newsTitle: "最新动态"
+  }
+};
+
+function applyLanguage(lang){
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang][key]){
+      el.innerHTML = translations[lang][key];
+    }
+  });
+  localStorage.setItem("naccf_lang", lang);
+}
+
+if(langBtn){
+  langBtn.addEventListener("click", ()=>{
+    currentLang = currentLang === "en" ? "zh" : "en";
+    applyLanguage(currentLang);
+  });
+
+  applyLanguage(currentLang);
+}
