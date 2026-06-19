@@ -107,3 +107,49 @@ if(langBtn){
 
   applyLanguage(currentLang);
 }
+
+// NACCF Language Switch
+const langBtn = document.getElementById("lang-btn");
+
+let currentLang = localStorage.getItem("naccf_lang") || "en";
+
+const translations = {
+  en: {
+    missionTitle: "Our Mission",
+    missionSub: "Culture · Education · Compassion · Community",
+    programsTitle: "Featured Programs",
+    programsSub: "Six Major Programs",
+    impactTitle: "Our Impact",
+    newsTitle: "Latest News",
+    newsSub: "Foundation Updates"
+  },
+  zh: {
+    missionTitle: "我们的使命",
+    missionSub: "文化 · 教育 · 关爱 · 社区",
+    programsTitle: "公益项目",
+    programsSub: "六大公益项目",
+    impactTitle: "公益影响力",
+    newsTitle: "最新动态",
+    newsSub: "基金会最新动态"
+  }
+};
+
+function applyLanguage(lang){
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const key = el.getAttribute("data-i18n");
+    if(translations[lang][key]){
+      el.innerHTML = translations[lang][key];
+    }
+  });
+
+  localStorage.setItem("naccf_lang", lang);
+}
+
+if(langBtn){
+  langBtn.addEventListener("click", function(){
+    currentLang = currentLang === "en" ? "zh" : "en";
+    applyLanguage(currentLang);
+  });
+
+  applyLanguage(currentLang);
+}
