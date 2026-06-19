@@ -211,3 +211,13 @@ padding:70px 6%;
 font-size:34px;
 }
 }
+
+.lang-btn{
+background:#d4af37;
+color:white;
+border:none;
+padding:8px 14px;
+border-radius:20px;
+font-weight:bold;
+cursor:pointer;
+}
