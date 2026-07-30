@@ -86,3 +86,59 @@ if(langBtn){
 
   applyLanguage(currentLang);
 }
+
+// ==============================
+// DONATION PROGRAM MODAL
+// ==============================
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("donation-modal");
+  const closeButton = document.getElementById("donation-modal-close");
+  const continueButton = document.getElementById("continue-site-btn");
+  const overlay = modal ? modal.querySelector(".donation-overlay") : null;
+  const openButtons = document.querySelectorAll(".open-donation-modal");
+
+  if (!modal) {
+    return;
+  }
+
+  function openDonationModal() {
+    modal.classList.add("show");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+  }
+
+  function closeDonationModal() {
+    modal.classList.remove("show");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("modal-open");
+  }
+
+  openButtons.forEach(function (button) {
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      openDonationModal();
+    });
+  });
+
+  if (closeButton) {
+    closeButton.addEventListener("click", closeDonationModal);
+  }
+
+  if (continueButton) {
+    continueButton.addEventListener("click", closeDonationModal);
+  }
+
+  if (overlay) {
+    overlay.addEventListener("click", closeDonationModal);
+  }
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && modal.classList.contains("show")) {
+      closeDonationModal();
+    }
+  });
+
+  // 首页打开后自动显示弹窗
+  setTimeout(openDonationModal, 500);
+});
