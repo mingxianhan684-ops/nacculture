@@ -3,175 +3,792 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>老年护理项目 | NACCF</title>
+
+<title>老年护理项目 | Senior Care Program | NACCF</title>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial,"Microsoft YaHei",sans-serif;background:#f8f5ef;color:#222;line-height:1.8}
-a{text-decoration:none;color:inherit}
-header{position:fixed;top:0;left:0;width:100%;z-index:999;background:rgba(0,0,0,.92);padding:14px 7%;display:flex;justify-content:space-between;align-items:center}
-.logo{display:flex;align-items:center;gap:12px;color:white}
-.logo img{width:58px;height:58px;border-radius:50%;background:white;object-fit:cover}
-.logo strong{display:block;font-size:24px}
-.logo span{display:block;font-size:12px;color:#ddd}
-nav a{color:white;margin-left:22px;font-size:14px;font-weight:bold}
-nav a:hover{color:#d4af37}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-.hero{min-height:78vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.68)),url("senior-banner.jpg");background-size:cover;background-position:center;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 8% 70px}
-.hero h1{font-size:62px;color:white;text-shadow:0 4px 20px #000;margin-bottom:12px}
-.hero h2{font-size:34px;color:#d4af37;margin-bottom:18px}
-.hero p{font-size:22px;color:white;max-width:900px;margin:auto}
+html{
+  scroll-behavior:smooth;
+}
 
-.section{padding:90px 8%}
-.story{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
-.story img{width:100%;border-radius:26px;box-shadow:0 15px 40px rgba(0,0,0,.18)}
-.story h2{font-size:40px;color:#7a1f1f;margin-bottom:18px}
-.story p{font-size:19px;color:#555;margin-bottom:16px}
+body{
+  font-family:Arial,"Microsoft YaHei",sans-serif;
+  background:#f8f5ef;
+  color:#222;
+  line-height:1.8;
+}
 
-.title{text-align:center;margin-bottom:50px}
-.title h2{font-size:44px;color:#7a1f1f;margin-bottom:10px}
-.title p{font-size:20px;color:#666}
+a{
+  text-decoration:none;
+  color:inherit;
+}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
-.card{background:white;border-radius:22px;padding:34px;box-shadow:0 12px 35px rgba(0,0,0,.1)}
-.card h3{font-size:26px;color:#7a1f1f;margin-bottom:14px}
-.card p,.card li{font-size:17px;color:#555}
-.card ul{padding-left:22px}
+img{
+  max-width:100%;
+  display:block;
+}
 
-.impact{background:#111;color:white}
-.impact .title h2{color:#d4af37}
-.impact .title p{color:#ddd}
-.impact .card{background:#1e1e1e;text-align:center}
-.impact .card h3{font-size:42px;color:#d4af37}
-.impact .card p{color:#eee}
+/* HEADER */
 
-.donate{background:#7a1f1f;color:white;text-align:center}
-.donate h2{font-size:44px;margin-bottom:18px}
-.donate p{font-size:20px;max-width:850px;margin:0 auto 30px}
-.btn{display:inline-block;background:#d4af37;color:white;padding:15px 36px;border-radius:50px;font-weight:bold;margin:8px}
-.btn.dark{background:#111}
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:999;
+  background:rgba(0,0,0,.92);
+  padding:14px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
-footer{background:#111;color:white;text-align:center;padding:50px 8%}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:white;
+}
+
+.logo img{
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:white;
+  object-fit:cover;
+}
+
+.logo strong{
+  display:block;
+  font-size:24px;
+}
+
+.logo span{
+  display:block;
+  font-size:12px;
+  color:#ddd;
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+nav a{
+  color:white;
+  font-size:13px;
+  font-weight:bold;
+  text-align:center;
+  line-height:1.3;
+  transition:.3s;
+}
+
+nav a:hover{
+  color:#d4af37;
+}
+
+/* HERO */
+
+.hero{
+  min-height:78vh;
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.68)),
+    url("senior-banner.jpg");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:130px 8% 70px;
+}
+
+.hero h1{
+  font-size:62px;
+  color:white;
+  text-shadow:0 4px 20px #000;
+  margin-bottom:8px;
+}
+
+.hero h2{
+  font-size:34px;
+  color:#d4af37;
+  margin-bottom:18px;
+}
+
+.hero p{
+  font-size:21px;
+  color:white;
+  max-width:930px;
+  margin:5px auto;
+}
+
+/* GENERAL SECTIONS */
+
+.section{
+  padding:90px 8%;
+}
+
+.story{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:45px;
+  align-items:center;
+}
+
+.story img{
+  width:100%;
+  border-radius:26px;
+  box-shadow:0 15px 40px rgba(0,0,0,.18);
+}
+
+.story h2{
+  font-size:40px;
+  color:#7a1f1f;
+  margin-bottom:2px;
+}
+
+.english-heading{
+  color:#b28b2f;
+  font-size:22px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+
+.story p{
+  font-size:18px;
+  color:#555;
+  margin-bottom:13px;
+}
+
+.english-text{
+  color:#777 !important;
+  font-size:16px !important;
+  line-height:1.7;
+  margin-top:-7px;
+  margin-bottom:18px !important;
+}
+
+.title{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.title h2{
+  font-size:44px;
+  color:#7a1f1f;
+  margin-bottom:3px;
+}
+
+.title .title-en{
+  font-size:22px;
+  color:#b28b2f;
+  font-weight:bold;
+}
+
+.title .subtitle{
+  font-size:18px;
+  color:#666;
+  margin-top:8px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
+
+.card{
+  background:white;
+  border-radius:22px;
+  padding:34px;
+  box-shadow:0 12px 35px rgba(0,0,0,.1);
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 18px 42px rgba(0,0,0,.15);
+}
+
+.card h3{
+  font-size:24px;
+  color:#7a1f1f;
+  margin-bottom:5px;
+}
+
+.card h4{
+  font-size:17px;
+  color:#b28b2f;
+  margin-bottom:14px;
+}
+
+.card p,
+.card li{
+  font-size:16px;
+  color:#555;
+}
+
+.card .card-en{
+  color:#777;
+  font-size:15px;
+  margin-top:7px;
+  line-height:1.65;
+}
+
+.card ul{
+  padding-left:22px;
+}
+
+/* IMPACT */
+
+.impact{
+  background:#111;
+  color:white;
+}
+
+.impact .title h2{
+  color:#d4af37;
+}
+
+.impact .title .title-en{
+  color:white;
+}
+
+.impact .title .subtitle{
+  color:#ddd;
+}
+
+.impact .card{
+  background:#1e1e1e;
+  text-align:center;
+}
+
+.impact .card h3{
+  font-size:42px;
+  color:#d4af37;
+}
+
+.impact .card p{
+  color:#eee;
+  font-size:18px;
+}
+
+.impact .card .card-en{
+  color:#bbb;
+}
+
+/* DONATION CTA */
+
+.donate{
+  background:#7a1f1f;
+  color:white;
+  text-align:center;
+}
+
+.donate h2{
+  font-size:44px;
+  margin-bottom:2px;
+}
+
+.donate h3{
+  color:#f0cf67;
+  font-size:25px;
+  margin-bottom:18px;
+}
+
+.donate p{
+  font-size:19px;
+  max-width:880px;
+  margin:4px auto;
+}
+
+.donate .donate-en{
+  color:#eee;
+  font-size:17px;
+  margin-bottom:28px;
+}
+
+.btn{
+  display:inline-block;
+  background:#d4af37;
+  color:white;
+  padding:15px 36px;
+  border-radius:50px;
+  font-weight:bold;
+  margin:8px;
+  transition:.3s;
+}
+
+.btn:hover{
+  background:#b99222;
+  transform:translateY(-3px);
+}
+
+.btn.dark{
+  background:#111;
+}
+
+.btn.dark:hover{
+  background:#333;
+}
+
+/* FOOTER */
+
+footer{
+  background:#111;
+  color:white;
+  text-align:center;
+  padding:50px 8%;
+}
+
+footer h3{
+  font-size:25px;
+  margin-bottom:4px;
+}
+
+footer p{
+  color:#ccc;
+  margin:4px 0;
+}
+
+/* MOBILE */
+
 @media(max-width:850px){
-nav{display:none}
-.logo span{display:none}
-.hero h1{font-size:40px}
-.story{grid-template-columns:1fr}
+
+  header{
+    padding:12px 20px;
+  }
+
+  nav{
+    display:none;
+  }
+
+  .logo span{
+    display:none;
+  }
+
+  .hero{
+    min-height:70vh;
+    padding:120px 6% 60px;
+  }
+
+  .hero h1{
+    font-size:40px;
+  }
+
+  .hero h2{
+    font-size:26px;
+  }
+
+  .hero p{
+    font-size:17px;
+  }
+
+  .story{
+    grid-template-columns:1fr;
+  }
+
+  .section{
+    padding:70px 6%;
+  }
+
+  .story h2,
+  .title h2,
+  .donate h2{
+    font-size:34px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-<div class="logo">
-<img src="logo.png.jpg">
-<div>
-<strong>NACCF</strong>
-<span>北美华人文化基金会</span>
-</div>
-</div>
-<nav>
-<a href="index.html">首页</a>
-<a href="about.html">关于</a>
-<a href="programs.html">项目</a>
-<a href="volunteer.html">志愿</a>
-<a href="news.html">新闻</a>
-<a href="donate.html">捐赠</a>
-<a href="contact.html">联系方式</a>
-</nav>
+
+  <a href="index.html" class="logo">
+    <img src="logo.png.jpg" alt="NACCF Logo">
+
+    <div>
+      <strong>NACCF</strong>
+      <span>北美中华文化基金会</span>
+    </div>
+  </a>
+
+  <nav>
+    <a href="index.html">首页<br>HOME</a>
+    <a href="about.html">关于<br>ABOUT</a>
+    <a href="programs.html">项目<br>PROGRAMS</a>
+    <a href="volunteer.html">志愿<br>VOLUNTEER</a>
+    <a href="news.html">新闻<br>NEWS</a>
+    <a href="donate.html">捐赠<br>DONATE</a>
+    <a href="contact.html">联系<br>CONTACT</a>
+  </nav>
+
 </header>
 
+<!-- HERO -->
 <section class="hero">
-<div>
-<h1>老年护理项目</h1>
-<h2>Senior Care Program</h2>
-<p>今天的老人，就是明天的我们。让陪伴、尊严与关爱，重新回到每一位长者身边。</p>
-</div>
+  <div>
+
+    <h1>老年护理项目</h1>
+    <h2>Senior Care Program</h2>
+
+    <p>
+      今天的老人，就是明天的我们。让陪伴、尊严与关爱，重新回到每一位长者身边。
+    </p>
+
+    <p>
+      Today’s seniors reflect our own future. Let companionship, dignity and
+      compassionate care return to every older adult in our community.
+    </p>
+
+  </div>
 </section>
 
+<!-- STORY -->
 <section class="section">
-<div class="story">
-<img src="senior-banner.jpg">
-<div>
-<h2>让晚年不再孤单</h2>
-<p>许多老人生活在孤独、疾病、语言障碍和经济压力之中。他们需要的不只是物质帮助，更需要陪伴、尊重和被看见。</p>
-<p>北美华人文化基金会通过老年护理项目，为社区长者提供节日关怀、生活慰问、陪伴探访、健康支持和紧急援助。</p>
-<p>我们相信，一个真正温暖的社区，不会忘记曾经为家庭和社会付出一生的老人。</p>
-</div>
-</div>
+
+  <div class="story">
+
+    <img src="senior-banner.jpg" alt="NACCF Senior Care Program">
+
+    <div>
+
+      <h2>让晚年不再孤单</h2>
+      <div class="english-heading">
+        Helping Seniors Live with Companionship and Dignity
+      </div>
+
+      <p>
+        许多老人生活在孤独、疾病、语言障碍和经济压力之中。
+        他们需要的不只是物质帮助，更需要陪伴、尊重和被看见。
+      </p>
+
+      <p class="english-text">
+        Many older adults live with loneliness, illness, language barriers and
+        financial hardship. They need more than material assistance; they also
+        need companionship, respect and the reassurance that they have not been forgotten.
+      </p>
+
+      <p>
+        北美中华文化基金会通过老年护理项目，为社区长者提供节日关怀、
+        生活慰问、陪伴探访、健康支持和紧急援助。
+      </p>
+
+      <p class="english-text">
+        Through the Senior Care Program, the North America Chinese Culture Foundation
+        provides holiday care, wellness visits, companionship, health-resource
+        assistance and emergency support for seniors in our community.
+      </p>
+
+      <p>
+        我们相信，一个真正温暖的社区，不会忘记曾经为家庭和社会付出一生的老人。
+      </p>
+
+      <p class="english-text">
+        We believe a truly compassionate community never forgets the older adults
+        who devoted their lives to their families and to society.
+      </p>
+
+    </div>
+  </div>
+
 </section>
 
+<!-- HOW DONATIONS ARE USED -->
 <section class="section" style="background:#f1eee8">
-<div class="title">
-<h2>您的捐款将用于</h2>
-<p>Your donation will support</p>
-</div>
 
-<div class="grid">
-<div class="card"><h3>👴 长者探访</h3><p>组织志愿者探访独居老人，提供陪伴、问候和基本协助。</p></div>
-<div class="card"><h3>🎁 节日关怀包</h3><p>为老人准备食品、生活用品、节日礼品和温暖问候。</p></div>
-<div class="card"><h3>🏥 健康支持</h3><p>协助老人获得健康信息、社区资源和必要的医疗转介。</p></div>
-<div class="card"><h3>🥘 餐食援助</h3><p>支持困难老人获得日常餐食、营养补给和生活必需品。</p></div>
-<div class="card"><h3>🚗 出行协助</h3><p>在能力范围内帮助老人解决就医、购物和社区活动交通问题。</p></div>
-<div class="card"><h3>❤️ 紧急援助</h3><p>为突发困难、疾病或生活危机中的老人提供及时帮助。</p></div>
-</div>
+  <div class="title">
+
+    <h2>您的捐款将用于</h2>
+    <div class="title-en">How Your Donation Will Be Used</div>
+
+    <p class="subtitle">
+      为社区长者提供陪伴、生活关怀、健康资源和紧急援助<br>
+      Supporting seniors through companionship, daily care, health resources
+      and emergency assistance
+    </p>
+
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <h3>👴 长者探访</h3>
+      <h4>Senior Visits and Companionship</h4>
+
+      <p>
+        组织志愿者探访独居老人，提供陪伴、问候和基本生活协助。
+      </p>
+
+      <p class="card-en">
+        Organizing volunteer visits for seniors who live alone and providing
+        companionship, friendly conversation and basic assistance.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>🎁 节日关怀包</h3>
+      <h4>Holiday Care Packages</h4>
+
+      <p>
+        为老人准备食品、生活用品、节日礼品和温暖问候。
+      </p>
+
+      <p class="card-en">
+        Preparing food, household necessities, holiday gifts and caring messages
+        for seniors during important holidays.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>🏥 健康支持</h3>
+      <h4>Health and Wellness Support</h4>
+
+      <p>
+        协助老人获得健康信息、社区资源和必要的医疗转介。
+      </p>
+
+      <p class="card-en">
+        Helping seniors access health information, community services and
+        appropriate referrals to medical resources.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>🥘 餐食援助</h3>
+      <h4>Meal and Nutrition Assistance</h4>
+
+      <p>
+        支持困难老人获得日常餐食、营养补给和生活必需品。
+      </p>
+
+      <p class="card-en">
+        Helping seniors facing hardship obtain meals, nutritional support and
+        essential household supplies.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>🚗 出行协助</h3>
+      <h4>Transportation Assistance</h4>
+
+      <p>
+        在能力范围内帮助老人解决就医、购物和参加社区活动的交通问题。
+      </p>
+
+      <p class="card-en">
+        Assisting seniors, when possible, with transportation for medical visits,
+        grocery shopping and community activities.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>❤️ 紧急援助</h3>
+      <h4>Emergency Assistance</h4>
+
+      <p>
+        为突发困难、疾病或生活危机中的老人提供及时帮助。
+      </p>
+
+      <p class="card-en">
+        Providing timely support to seniors facing illness, unexpected hardship
+        or an urgent personal crisis.
+      </p>
+
+    </div>
+
+  </div>
 </section>
 
+<!-- WHY IT MATTERS -->
 <section class="section">
-<div class="title">
-<h2>为什么这个项目重要？</h2>
-<p>Why this program matters</p>
-</div>
 
-<div class="grid">
-<div class="card">
-<h3>因为老人需要被看见</h3>
-<p>许多老人沉默地承受孤独和困难。一次探访、一通电话、一份关怀，都可能成为他们生活里的光。</p>
-</div>
+  <div class="title">
 
-<div class="card">
-<h3>因为尊严不该被遗忘</h3>
-<p>关爱老人，不是施舍，而是对生命经验、家庭贡献和社会记忆的尊重。</p>
-</div>
+    <h2>为什么这个项目重要？</h2>
+    <div class="title-en">Why This Program Matters</div>
 
-<div class="card">
-<h3>因为每个人都会老去</h3>
-<p>今天我们如何对待老人，就是未来社会如何对待我们的样子。</p>
-</div>
-</div>
+    <p class="subtitle">
+      每一位长者都值得被尊重、被关心、被温柔地对待。<br>
+      Every senior deserves respect, care and compassionate support.
+    </p>
+
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+
+      <h3>因为老人需要被看见</h3>
+      <h4>Seniors Deserve to Be Seen and Remembered</h4>
+
+      <p>
+        许多老人沉默地承受孤独和困难。一次探访、一通电话、一份关怀，
+        都可能成为他们生活里的光。
+      </p>
+
+      <p class="card-en">
+        Many seniors quietly endure loneliness and hardship. A personal visit,
+        a phone call or a thoughtful act of care can bring light and comfort
+        into their lives.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>因为尊严不该被遗忘</h3>
+      <h4>Dignity Should Never Be Forgotten</h4>
+
+      <p>
+        关爱老人，不是施舍，而是对生命经验、家庭贡献和社会记忆的尊重。
+      </p>
+
+      <p class="card-en">
+        Caring for seniors is not an act of charity alone. It is an expression
+        of respect for their life experience, family contributions and place
+        in our shared community history.
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>因为每个人都会老去</h3>
+      <h4>Everyone Will Grow Older</h4>
+
+      <p>
+        今天我们如何对待老人，就是未来社会如何对待我们的样子。
+      </p>
+
+      <p class="card-en">
+        The way we treat older adults today helps shape the kind of society
+        that will care for all of us in the future.
+      </p>
+
+    </div>
+
+  </div>
 </section>
 
+<!-- GOALS -->
 <section class="section impact">
-<div class="title">
-<h2>项目目标</h2>
-<p>Our Goals</p>
-</div>
 
-<div class="grid">
-<div class="card"><h3>10,000+</h3><p>长者关怀服务</p></div>
-<div class="card"><h3>3,000+</h3><p>节日关怀包</p></div>
-<div class="card"><h3>1,500+</h3><p>志愿探访小时</p></div>
-<div class="card"><h3>500+</h3><p>紧急援助家庭</p></div>
-</div>
+  <div class="title">
+
+    <h2>项目目标</h2>
+    <div class="title-en">Our Program Goals</div>
+
+    <p class="subtitle">
+      汇聚社区力量，让更多长者获得陪伴、尊严和切实的生活支持。<br>
+      Bringing our community together to provide companionship, dignity
+      and practical support for more seniors.
+    </p>
+
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>10,000+</h3>
+      <p>长者关怀服务</p>
+      <p class="card-en">Senior Care Services</p>
+    </div>
+
+    <div class="card">
+      <h3>3,000+</h3>
+      <p>节日关怀包</p>
+      <p class="card-en">Holiday Care Packages</p>
+    </div>
+
+    <div class="card">
+      <h3>1,500+</h3>
+      <p>志愿探访小时</p>
+      <p class="card-en">Volunteer Visiting Hours</p>
+    </div>
+
+    <div class="card">
+      <h3>500+</h3>
+      <p>紧急援助家庭</p>
+      <p class="card-en">Families Receiving Emergency Assistance</p>
+    </div>
+
+  </div>
 </section>
 
+<!-- DONATION CTA -->
 <section class="section donate">
-<h2>支持老年护理项目</h2>
-<p>您的每一份善意，都可能让一位老人多一份安心、多一份尊严、多一份温暖。</p>
-<a class="btn" href="donate.html">立即捐款 Donate Now</a>
-<a class="btn dark" href="volunteer.html">成为志愿者</a>
-<a class="btn dark" href="programs.html">返回项目页</a>
+
+  <h2>支持老年护理项目</h2>
+  <h3>Support the Senior Care Program</h3>
+
+  <p>
+    您的每一份善意，都可能让一位老人多一份安心、多一份尊严、多一份温暖。
+  </p>
+
+  <p class="donate-en">
+    Every act of kindness can bring an older adult greater comfort,
+    dignity and warmth.
+  </p>
+
+  <a
+    class="btn"
+    href="https://www.zeffy.com/en-US/donation-form/senior-care-program"
+    target="_blank"
+    rel="noopener noreferrer">
+    立即捐款 / Donate Now
+  </a>
+
+  <a class="btn dark" href="volunteer.html">
+    成为志愿者 / Volunteer
+  </a>
+
+  <a class="btn dark" href="programs.html">
+    返回项目页 / Back to Programs
+  </a>
+
 </section>
 
+<!-- FOOTER -->
 <footer>
-<h3>North America Chinese Culture Foundation</h3>
-<p>北美华人文化基金会</p>
-<p>Houston, Texas, USA</p>
-<p>info@nacculture.org</p>
-<p>www.nacculture.org</p>
-<br>
-<p>© 2026 North America Chinese Culture Foundation. All Rights Reserved.</p>
-<p>501(c)(3) Application Pending</p>
+
+  <h3>North America Chinese Culture Foundation</h3>
+  <p>北美中华文化基金会</p>
+
+  <p>Houston, Texas, USA</p>
+  <p>info@nacculture.org</p>
+  <p>www.nacculture.org</p>
+
+  <br>
+
+  <p>
+    © 2026 North America Chinese Culture Foundation.
+    All Rights Reserved.
+  </p>
+
+  <p>501(c)(3) Application Pending</p>
+
 </footer>
 
 </body>
