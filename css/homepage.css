@@ -5,6 +5,39 @@
    Left Slider + Right Donation Panel
 =========================================== */
 
+.hero-title-strip{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:86px;
+
+    background:#fff;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    z-index:50;
+
+    box-shadow:0 2px 12px rgba(0,0,0,.08);
+}
+
+.hero-title-strip h1{
+    margin:0;
+    font-size:40px;
+    color:#7a1f1f;
+    font-weight:700;
+}
+
+.hero-title-strip p{
+    margin-top:6px;
+    font-size:18px;
+    color:#666;
+    letter-spacing:1px;
+}
+
 .hero-v4{
 position:relative;
 height:760px;
