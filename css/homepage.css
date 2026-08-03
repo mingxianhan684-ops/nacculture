@@ -1,20 +1,30 @@
 /* NACCF Homepage CSS - Keep Hero, Rebuild Below */
 
+/* ===========================================
+   HERO V5
+   Left Slider + Right Donation Panel
+=========================================== */
+
 .hero-v4{
 position:relative;
 height:760px;
 overflow:hidden;
-background:#111;
+background:#f3efe7;
+display:grid;
+grid-template-columns:minmax(0,1fr) 390px;
+padding-top:86px;
 }
 
 .hero-slide{
 position:absolute;
-top:0;
+top:86px;
 left:0;
-width:100%;
-height:100%;
+width:calc(100% - 390px);
+height:calc(100% - 86px);
 opacity:0;
 transition:opacity 1.2s ease-in-out;
+overflow:hidden;
+background:#111;
 }
 
 .hero-slide.active{
@@ -29,100 +39,548 @@ object-fit:cover;
 object-position:center;
 }
 
-.hero-dark-layer{
+.hero-donation-panel{
 position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:linear-gradient(to bottom,rgba(0,0,0,.35),rgba(0,0,0,.25),rgba(0,0,0,.65));
-z-index:2;
+top:86px;
+right:0;
+width:390px;
+height:calc(100% - 86px);
+background:rgba(255,255,255,.97);
+box-shadow:-12px 0 35px rgba(0,0,0,.18);
+padding:28px 24px;
+display:flex;
+flex-direction:column;
+z-index:10;
+overflow:hidden;
 }
 
-.hero-panel{
-position:absolute;
-top:68%;
-left:50%;
-transform:translate(-50%,-50%);
-z-index:5;
-width:82%;
-max-width:980px;
-text-align:center;
-background:rgba(0,0,0,.38);
-padding:34px 44px;
-border-radius:22px;
-backdrop-filter:blur(8px);
-box-shadow:0 18px 45px rgba(0,0,0,.35);
+.donation-panel-header{
+display:flex;
+align-items:center;
+gap:14px;
+padding-bottom:18px;
+border-bottom:1px solid #ece7dc;
 }
 
-.hero-panel h1{
-font-size:58px;
-line-height:1.12;
-color:white;
-margin-bottom:14px;
-text-shadow:0 5px 18px rgba(0,0,0,.95);
-}
-
-.hero-panel h2{
-font-size:30px;
-color:#d4af37;
-margin-bottom:12px;
-}
-
-.hero-panel p{
-font-size:20px;
-color:white;
-max-width:850px;
-margin:0 auto 24px;
-line-height:1.6;
-}
-
-.hero-buttons{
+.donation-heart{
+width:48px;
+height:48px;
+border-radius:50%;
+background:#7a1f1f;
 display:flex;
 justify-content:center;
-gap:18px;
-flex-wrap:wrap;
+align-items:center;
+font-size:22px;
+color:white;
+flex-shrink:0;
 }
 
-.hero-buttons a{
-padding:14px 34px;
-border-radius:50px;
+.donation-panel-header h2{
+font-size:26px;
+color:#7a1f1f;
+margin:0;
+}
+
+.donation-panel-header p{
+font-size:14px;
+color:#777;
+margin-top:4px;
+}
+
+.donation-list-window{
+margin-top:18px;
+height:305px;
+overflow:hidden;
+position:relative;
+}
+
+.donation-list-window::before{
+content:"";
+position:absolute;
+left:0;
+top:0;
+width:100%;
+height:32px;
+background:linear-gradient(#fff,rgba(255,255,255,0));
+z-index:3;
+}
+
+.donation-list-window::after{
+content:"";
+position:absolute;
+left:0;
+bottom:0;
+width:100%;
+height:32px;
+background:linear-gradient(rgba(255,255,255,0),#fff);
+z-index:3;
+}
+
+/* Donation List */
+
+.donation-scroll{
+display:flex;
+flex-direction:column;
+animation:donationScroll 28s linear infinite;
+}
+
+.donation-item{
+display:grid;
+grid-template-columns:72px 96px 70px 1fr;
+align-items:center;
+gap:10px;
+padding:13px 0;
+border-bottom:1px solid #eee;
+font-size:14px;
+}
+
+.donation-item span:nth-child(1){
 font-weight:bold;
-transition:.3s;
+color:#7a1f1f;
 }
 
-.hero-buttons .gold{
+.donation-item span:nth-child(2){
+color:#888;
+font-size:13px;
+}
+
+.donation-item span:nth-child(3){
+color:#d4af37;
+font-weight:bold;
+}
+
+.donation-item span:nth-child(4){
+color:#444;
+font-weight:600;
+}
+
+@keyframes donationScroll{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(-50%);
+}
+
+}
+
+/* Statistics */
+
+.donation-stats{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-top:18px;
+}
+
+.stat-card{
+background:#faf8f2;
+border-radius:14px;
+padding:16px;
+text-align:center;
+}
+
+.stat-card h3{
+font-size:26px;
+color:#7a1f1f;
+margin-bottom:6px;
+}
+
+.stat-card p{
+font-size:13px;
+color:#777;
+}
+
+/* Buttons */
+
+.donation-buttons{
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.donation-buttons a{
+display:block;
+text-align:center;
+padding:15px;
+border-radius:40px;
+font-weight:bold;
+transition:.25s;
+text-decoration:none;
+}
+
+.donation-now{
 background:#d4af37;
 color:white;
 }
 
-.hero-buttons .white{
-border:2px solid white;
+.donation-now:hover{
+background:#be9825;
+}
+
+.donation-search{
+background:#2f7de0;
 color:white;
 }
 
+.donation-search:hover{
+background:#2567bb;
+}
+
+.donation-volunteer{
+background:#7a1f1f;
+color:white;
+}
+
+.donation-volunteer:hover{
+background:#611616;
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+.hero-v4{
+display:block;
+height:auto;
+}
+
+.hero-slide{
+position:relative;
+top:0;
+left:0;
+width:100%;
+height:520px;
+}
+
+.hero-donation-panel{
+position:relative;
+top:0;
+right:0;
+width:100%;
+height:auto;
+box-shadow:none;
+}
+
+}
+
+/* ===========================================
+   PART 3 — Complete Donation Panel + Slider
+=========================================== */
+
+/* 实际捐赠记录轨道 */
+
+.donation-list-track{
+display:flex;
+flex-direction:column;
+animation:donationPanelScroll 32s linear infinite;
+will-change:transform;
+}
+
+.donation-list-window:hover .donation-list-track{
+animation-play-state:paused;
+}
+
+.donation-record{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:14px;
+min-height:76px;
+padding:13px 6px;
+border-bottom:1px solid #eee8de;
+}
+
+.donation-record > div{
+min-width:0;
+padding-right:8px;
+}
+
+.donation-record strong{
+display:block;
+font-size:16px;
+color:#222;
+margin-bottom:2px;
+}
+
+.donation-record span{
+display:block;
+font-size:13px;
+line-height:1.35;
+color:#777;
+white-space:normal;
+}
+
+.donation-record b{
+font-size:19px;
+color:#7a1f1f;
+white-space:nowrap;
+}
+
+@keyframes donationPanelScroll{
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(-760px);
+}
+}
+
+/* 三项统计数据 */
+
+.donation-stats{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:8px;
+margin:4px 0 18px;
+}
+
+.donation-stats > div{
+background:#f5f0e7;
+border:1px solid #eee4d5;
+border-radius:14px;
+padding:12px 5px;
+text-align:center;
+}
+
+.donation-stats strong{
+display:block;
+font-size:17px;
+line-height:1.2;
+color:#7a1f1f;
+margin-bottom:5px;
+}
+
+.donation-stats span{
+display:block;
+font-size:11px;
+line-height:1.35;
+color:#666;
+}
+
+/* 面板底部按钮 */
+
+.donation-panel-buttons{
+margin-top:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+.donation-panel-buttons a{
+display:block;
+text-align:center;
+border-radius:30px;
+font-weight:bold;
+text-decoration:none;
+transition:transform .25s,background .25s;
+}
+
+.donation-panel-buttons a:hover{
+transform:translateY(-2px);
+}
+
+.donation-main-btn{
+padding:13px 18px;
+background:#d4af37;
+color:white;
+}
+
+.donation-main-btn:hover{
+background:#b99222;
+}
+
+.donation-second-btn{
+padding:12px 18px;
+background:#111;
+color:white;
+}
+
+.donation-second-btn:hover{
+background:#333;
+}
+
+.donation-text-btn{
+padding:9px 12px;
+color:#7a1f1f;
+font-size:14px;
+border:1px solid #7a1f1f;
+}
+
+.donation-text-btn:hover{
+background:#7a1f1f;
+color:white;
+}
+
+/* 左侧轮播圆点 */
+
 .slider-dots{
 position:absolute;
-left:50%;
-bottom:28px;
+left:calc((100% - 390px) / 2);
+bottom:22px;
 transform:translateX(-50%);
 display:flex;
-gap:12px;
-z-index:8;
+gap:11px;
+z-index:20;
 }
 
 .slider-dot{
-width:13px;
-height:13px;
+width:12px;
+height:12px;
 border-radius:50%;
 background:white;
-opacity:.45;
+opacity:.65;
 cursor:pointer;
+box-shadow:0 2px 8px rgba(0,0,0,.4);
+transition:.25s;
 }
 
 .slider-dot.active{
 background:#d4af37;
 opacity:1;
+transform:scale(1.15);
+}
+
+/* 左侧向下箭头 */
+
+.scroll-down{
+position:absolute;
+left:calc((100% - 390px) / 2);
+bottom:47px;
+transform:translateX(-50%);
+z-index:20;
+color:white;
+font-size:32px;
+line-height:1;
+text-shadow:0 3px 9px rgba(0,0,0,.75);
+}
+
+/* 平板与手机：图片在上，捐赠面板在下 */
+
+@media(max-width:950px){
+
+.hero-v4{
+position:relative;
+display:block;
+height:auto;
+min-height:1100px;
+padding-top:78px;
+background:#f8f5ef;
+overflow:hidden;
+}
+
+.hero-slide{
+position:absolute;
+top:78px;
+left:0;
+width:100%;
+height:520px;
+}
+
+.hero-slide img{
+width:100%;
+height:100%;
+object-fit:cover;
+object-position:center;
+}
+
+.hero-donation-panel{
+position:absolute;
+top:598px;
+left:0;
+right:auto;
+width:100%;
+height:502px;
+padding:24px 6%;
+box-shadow:0 -8px 28px rgba(0,0,0,.15);
+}
+
+.donation-list-window{
+height:210px;
+margin:14px 0;
+}
+
+.donation-record{
+min-height:68px;
+}
+
+.slider-dots{
+left:50%;
+top:560px;
+bottom:auto;
+}
+
+.scroll-down{
+display:none;
+}
+}
+
+/* 小屏手机 */
+
+@media(max-width:600px){
+
+.hero-v4{
+min-height:1120px;
+}
+
+.hero-slide{
+height:430px;
+}
+
+.hero-donation-panel{
+top:508px;
+height:612px;
+padding:22px 18px;
+}
+
+.donation-panel-header h2{
+font-size:23px;
+}
+
+.donation-list-window{
+height:245px;
+}
+
+.donation-record{
+min-height:70px;
+}
+
+.donation-record strong{
+font-size:15px;
+}
+
+.donation-record span{
+font-size:12px;
+}
+
+.donation-record b{
+font-size:17px;
+}
+
+.donation-stats{
+grid-template-columns:repeat(3,1fr);
+gap:6px;
+}
+
+.donation-stats strong{
+font-size:15px;
+}
+
+.donation-stats span{
+font-size:10px;
+}
+
+.slider-dots{
+top:470px;
+}
+
+.donation-panel-buttons a{
+font-size:14px;
+}
 }
 
 /* BELOW HERO */
