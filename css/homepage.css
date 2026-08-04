@@ -10,7 +10,7 @@ position:absolute;
 top:100px;
     left:0;
     width:100%;
-    height:86px;
+    height:110px;
 
     background:#fff;
 
@@ -50,10 +50,10 @@ padding-top:186px;
 
 .hero-slide{
 position:absolute;
-top:186px;
+top:196px;
 left:0;
 width:calc(100% - 390px);
-height:calc(100% - 186px);
+height:calc(100% - 196px);
 opacity:0;
 transition:opacity 1.2s ease-in-out;
 overflow:hidden;
@@ -74,10 +74,10 @@ object-position:center;
 
 .hero-donation-panel{
 position:absolute;
-top:186px;
+top:196px;
 right:0;
 width:390px;
-height:calc(100% - 186px);
+height:calc(100% - 196px);
 background:rgba(255,255,255,.97);
 box-shadow:-12px 0 35px rgba(0,0,0,.18);
 padding:28px 24px;
