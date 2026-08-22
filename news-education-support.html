@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Education Support Program | NACCF</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,"Microsoft YaHei",sans-serif;
+background:#f8f5ef;
+color:#222;
+line-height:1.8;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+background:rgba(0,0,0,.92);
+padding:14px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+color:white;
+}
+
+.logo img{
+width:56px;
+height:56px;
+border-radius:50%;
+background:white;
+object-fit:cover;
+}
+
+.logo strong{
+display:block;
+font-size:24px;
+letter-spacing:1px;
+}
+
+.logo span{
+display:block;
+font-size:12px;
+color:#ddd;
+}
+
+nav a{
+color:white;
+margin-left:22px;
+font-size:14px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+.article-hero{
+min-height:70vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.72)),
+url("education-banner.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:145px 8% 80px;
+color:white;
+}
+
+.article-hero-content{
+max-width:950px;
+}
+
+.category{
+display:inline-block;
+padding:7px 18px;
+margin-bottom:20px;
+border-radius:30px;
+background:#d4af37;
+color:white;
+font-weight:bold;
+}
+
+.article-hero h1{
+font-size:58px;
+line-height:1.2;
+margin-bottom:16px;
+}
+
+.article-hero h2{
+font-size:30px;
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.article-hero p{
+font-size:19px;
+color:#eee;
+}
+
+.article{
+padding:85px 8%;
+}
+
+.article-container{
+max-width:980px;
+margin:auto;
+background:white;
+padding:55px;
+border-radius:25px;
+box-shadow:0 15px 45px rgba(0,0,0,.1);
+}
+
+.article-intro{
+font-size:22px;
+font-weight:bold;
+color:#7a1f1f;
+padding-left:22px;
+border-left:5px solid #d4af37;
+margin-bottom:35px;
+}
+
+.article h3{
+font-size:31px;
+color:#7a1f1f;
+margin:38px 0 14px;
+}
+
+.article p{
+font-size:18px;
+color:#444;
+margin-bottom:20px;
+}
+
+.main-image{
+width:100%;
+max-height:540px;
+object-fit:cover;
+object-position:center;
+border-radius:20px;
+margin:25px 0 12px;
+}
+
+.caption{
+font-size:14px!important;
+color:#777!important;
+text-align:center;
+margin-bottom:35px!important;
+}
+
+.support-grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:20px;
+margin:30px 0;
+}
+
+.support-card{
+background:#f8f5ef;
+padding:25px;
+border-radius:18px;
+border-top:4px solid #d4af37;
+}
+
+.support-card h4{
+font-size:21px;
+color:#7a1f1f;
+margin-bottom:8px;
+}
+
+.support-card p{
+font-size:16px;
+margin:0;
+}
+
+.highlight{
+background:#7a1f1f;
+color:white;
+padding:35px;
+border-radius:20px;
+margin:38px 0;
+}
+
+.highlight h3{
+color:#d4af37;
+margin:0 0 12px;
+}
+
+.highlight p{
+color:white;
+margin:0;
+}
+
+.article-actions{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+margin-top:45px;
+padding-top:35px;
+border-top:1px solid #ddd;
+}
+
+.btn{
+display:inline-block;
+background:#d4af37;
+color:white;
+padding:14px 30px;
+border-radius:50px;
+font-weight:bold;
+}
+
+.btn-secondary{
+background:#7a1f1f;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:55px 8%;
+}
+
+footer p{
+color:#ccc;
+margin:5px 0;
+}
+
+@media(max-width:850px){
+nav{
+display:none;
+}
+
+.logo span{
+display:none;
+}
+
+.article-hero h1{
+font-size:40px;
+}
+
+.article-hero h2{
+font-size:24px;
+}
+
+.article{
+padding:55px 5%;
+}
+
+.article-container{
+padding:30px 22px;
+}
+
+.support-grid{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">
+<img src="logo.png.jpg" alt="NACCF Logo">
+
+<div>
+<strong>NACCF</strong>
+<span>North America Chinese Culture Foundation</span>
+</div>
+</a>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT</a>
+<a href="programs.html">PROGRAMS</a>
+<a href="volunteer.html">VOLUNTEER</a>
+<a href="news.html">NEWS</a>
+<a href="donate.html">DONATE</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+
+</header>
+
+<section class="article-hero">
+
+<div class="article-hero-content">
+
+<span class="category">Education Support</span>
+
+<h1>Education Support Program</h1>
+
+<h2>助学筑梦，点亮未来</h2>
+
+<p>Supporting students through opportunity, encouragement, and educational resources.</p>
+
+</div>
+
+</section>
+
+<main class="article">
+
+<article class="article-container">
+
+<p class="article-intro">
+Education can open doors, strengthen families, and give young people the confidence to build a better future. NACCF’s Education Support Program is dedicated to helping students obtain the resources and encouragement they need to continue learning.
+</p>
+
+<img
+class="main-image"
+src="community-outreach-event.jpeg"
+alt="NACCF community education support activity"
+>
+
+<p class="caption">
+Community outreach and education support activity.
+</p>
+
+<h3>Creating Opportunities Through Education</h3>
+
+<p>
+The North America Chinese Culture Foundation believes that every student deserves an opportunity to learn and grow. Financial challenges, limited learning materials, and a lack of community support can prevent students from reaching their potential.
+</p>
+
+<p>
+Through education-focused charitable activities, the foundation works to connect students and families with books, learning materials, community resources, mentorship, and other forms of educational assistance.
+</p>
+
+<h3>How the Program Supports Students</h3>
+
+<div class="support-grid">
+
+<div class="support-card">
+<h4>Books and Learning Materials</h4>
+<p>
+Providing students with educational books, school supplies, and useful learning resources.
+</p>
+</div>
+
+<div class="support-card">
+<h4>Educational Assistance</h4>
+<p>
+Helping eligible students access educational opportunities and additional academic support.
+</p>
+</div>
+
+<div class="support-card">
+<h4>Community Connections</h4>
+<p>
+Connecting students and families with volunteers, educators, organizations, and community resources.
+</p>
+</div>
+
+<div class="support-card">
+<h4>Encouragement and Mentorship</h4>
+<p>
+Encouraging young people to develop confidence, responsibility, and long-term educational goals.
+</p>
+</div>
+
+</div>
+
+<h3>Working Together for a Brighter Future</h3>
+
+<p>
+Meaningful education support requires cooperation among families, schools, volunteers, donors, businesses, and community organizations. NACCF welcomes educators and community partners who would like to contribute knowledge, resources, or professional experience.
+</p>
+
+<p>
+As the program continues to develop, the foundation will share additional activity photographs, student stories, program reports, and information about future education initiatives through this website.
+</p>
+
+<div class="highlight">
+
+<h3>Every Gift Can Support a Student’s Future</h3>
+
+<p>
+Donations to the Education Support Fund can help provide learning materials, educational resources, and program support for students and families in need.
+</p>
+
+</div>
+
+<div class="article-actions">
+
+<a
+class="btn"
+href="https://www.zeffy.com/en-US/donation-form/education-support-fund"
+target="_blank"
+rel="noopener noreferrer"
+>
+Support Education
+</a>
+
+<a class="btn btn-secondary" href="news.html">
+Back to Latest News
+</a>
+
+</div>
+
+</article>
+
+</main>
+
+<footer>
+
+<h3>North America Chinese Culture Foundation</h3>
+
+<p>Houston, Texas, USA</p>
+<p>info@nacculture.org</p>
+<p>www.nacculture.org</p>
+
+<br>
+
+<p>
+© 2026 North America Chinese Culture Foundation. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
