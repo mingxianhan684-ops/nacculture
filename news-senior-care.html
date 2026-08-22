@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Senior Care Program | NACCF</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,"Microsoft YaHei",sans-serif;
+background:#f8f5ef;
+color:#222;
+line-height:1.8;
+}
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:999;
+background:rgba(0,0,0,.92);
+padding:14px 7%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+color:white;
+}
+
+.logo img{
+width:56px;
+height:56px;
+border-radius:50%;
+background:white;
+object-fit:cover;
+}
+
+.logo strong{
+display:block;
+font-size:24px;
+letter-spacing:1px;
+}
+
+.logo span{
+display:block;
+font-size:12px;
+color:#ddd;
+}
+
+nav a{
+color:white;
+margin-left:22px;
+font-size:14px;
+font-weight:bold;
+}
+
+nav a:hover{
+color:#d4af37;
+}
+
+.article-hero{
+min-height:70vh;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.72)),
+url("senior-banner.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:145px 8% 80px;
+color:white;
+}
+
+.article-hero-content{
+max-width:950px;
+}
+
+.category{
+display:inline-block;
+padding:7px 18px;
+margin-bottom:20px;
+border-radius:30px;
+background:#d4af37;
+color:white;
+font-weight:bold;
+}
+
+.article-hero h1{
+font-size:58px;
+line-height:1.2;
+margin-bottom:16px;
+}
+
+.article-hero h2{
+font-size:30px;
+color:#d4af37;
+margin-bottom:15px;
+}
+
+.article-hero p{
+font-size:19px;
+color:#eee;
+}
+
+.article{
+padding:85px 8%;
+}
+
+.article-container{
+max-width:980px;
+margin:auto;
+background:white;
+padding:55px;
+border-radius:25px;
+box-shadow:0 15px 45px rgba(0,0,0,.1);
+}
+
+.article-intro{
+font-size:22px;
+font-weight:bold;
+color:#7a1f1f;
+padding-left:22px;
+border-left:5px solid #d4af37;
+margin-bottom:35px;
+}
+
+.article h3{
+font-size:31px;
+color:#7a1f1f;
+margin:38px 0 14px;
+}
+
+.article p{
+font-size:18px;
+color:#444;
+margin-bottom:20px;
+}
+
+.main-image{
+width:100%;
+max-height:540px;
+object-fit:cover;
+object-position:center;
+border-radius:20px;
+margin:25px 0 12px;
+}
+
+.caption{
+font-size:14px!important;
+color:#777!important;
+text-align:center;
+margin-bottom:35px!important;
+}
+
+.care-grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:20px;
+margin:30px 0;
+}
+
+.care-card{
+background:#f8f5ef;
+padding:25px;
+border-radius:18px;
+border-top:4px solid #d4af37;
+}
+
+.care-card h4{
+font-size:21px;
+color:#7a1f1f;
+margin-bottom:8px;
+}
+
+.care-card p{
+font-size:16px;
+margin:0;
+}
+
+.highlight{
+background:#7a1f1f;
+color:white;
+padding:35px;
+border-radius:20px;
+margin:38px 0;
+}
+
+.highlight h3{
+color:#d4af37;
+margin:0 0 12px;
+}
+
+.highlight p{
+color:white;
+margin:0;
+}
+
+.article-actions{
+display:flex;
+gap:16px;
+flex-wrap:wrap;
+margin-top:45px;
+padding-top:35px;
+border-top:1px solid #ddd;
+}
+
+.btn{
+display:inline-block;
+background:#d4af37;
+color:white;
+padding:14px 30px;
+border-radius:50px;
+font-weight:bold;
+}
+
+.btn-secondary{
+background:#7a1f1f;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:55px 8%;
+}
+
+footer p{
+color:#ccc;
+margin:5px 0;
+}
+
+@media(max-width:850px){
+nav{
+display:none;
+}
+
+.logo span{
+display:none;
+}
+
+.article-hero h1{
+font-size:40px;
+}
+
+.article-hero h2{
+font-size:24px;
+}
+
+.article{
+padding:55px 5%;
+}
+
+.article-container{
+padding:30px 22px;
+}
+
+.care-grid{
+grid-template-columns:1fr;
+}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<a href="index.html" class="logo">
+<img src="logo.png.jpg" alt="NACCF Logo">
+
+<div>
+<strong>NACCF</strong>
+<span>North America Chinese Culture Foundation</span>
+</div>
+</a>
+
+<nav>
+<a href="index.html">HOME</a>
+<a href="about.html">ABOUT</a>
+<a href="programs.html">PROGRAMS</a>
+<a href="volunteer.html">VOLUNTEER</a>
+<a href="news.html">NEWS</a>
+<a href="donate.html">DONATE</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+
+</header>
+
+<section class="article-hero">
+
+<div class="article-hero-content">
+
+<span class="category">Senior Care</span>
+
+<h1>Senior Care Program</h1>
+
+<h2>敬老爱老，温暖相伴</h2>
+
+<p>
+Supporting dignity, companionship, health, and community connections for seniors.
+</p>
+
+</div>
+
+</section>
+
+<main class="article">
+
+<article class="article-container">
+
+<p class="article-intro">
+Caring for seniors is not only an act of kindness—it is a commitment to dignity, respect, companionship, and community responsibility.
+</p>
+
+<img
+class="main-image"
+src="senior-care-event.jpg"
+alt="NACCF senior care community activity"
+>
+
+<p class="caption">
+A community activity supporting companionship and care for seniors.
+</p>
+
+<h3>Caring for the People Who Built Our Communities</h3>
+
+<p>
+Older adults have contributed their knowledge, experience, work, and love to their families and communities. As people grow older, they may face loneliness, limited mobility, health concerns, language barriers, and difficulty accessing community resources.
+</p>
+
+<p>
+The North America Chinese Culture Foundation’s Senior Care Program seeks to build meaningful connections with seniors and help them feel respected, valued, and included in community life.
+</p>
+
+<h3>How the Program Supports Seniors</h3>
+
+<div class="care-grid">
+
+<div class="care-card">
+<h4>Companionship</h4>
+<p>
+Organizing visits, conversations, celebrations, and activities that help reduce loneliness and strengthen human connection.
+</p>
+</div>
+
+<div class="care-card">
+<h4>Community Resources</h4>
+<p>
+Helping seniors and families learn about useful community services, support programs, and local resources.
+</p>
+</div>
+
+<div class="care-card">
+<h4>Cultural Connection</h4>
+<p>
+Creating opportunities for seniors to participate in cultural activities and share their stories, traditions, and experience.
+</p>
+</div>
+
+<div class="care-card">
+<h4>Respect and Dignity</h4>
+<p>
+Promoting a community culture that values older adults and recognizes their lifelong contributions.
+</p>
+</div>
+
+</div>
+
+<h3>Bringing Generations Together</h3>
+
+<p>
+Senior care becomes more meaningful when different generations participate together. Volunteers, students, families, professionals, and community organizations can all help create a stronger network of respect and companionship.
+</p>
+
+<p>
+Activities may include senior visits, cultural celebrations, friendly conversations, community gatherings, resource sharing, and volunteer service. The foundation will continue to share photographs and reports as future senior care activities are organized.
+</p>
+
+<h3>Building a More Caring Community</h3>
+
+<p>
+The Senior Care Program is part of NACCF’s broader commitment to community service. Our goal is to help seniors remain connected to the people and culture around them while encouraging families and volunteers to take an active role in caring for older community members.
+</p>
+
+<div class="highlight">
+
+<h3>Your Support Can Bring Warmth and Companionship</h3>
+
+<p>
+Donations can help support senior activities, community outreach, cultural programs, volunteer services, and other resources that improve the lives of older adults.
+</p>
+
+</div>
+
+<div class="article-actions">
+
+<a
+class="btn"
+href="https://www.zeffy.com/en-US/donation-form/senior-care-program"
+target="_blank"
+rel="noopener noreferrer"
+>
+Support Senior Care
+</a>
+
+<a class="btn btn-secondary" href="news.html">
+Back to Latest News
+</a>
+
+</div>
+
+</article>
+
+</main>
+
+<footer>
+
+<h3>North America Chinese Culture Foundation</h3>
+
+<p>Houston, Texas, USA</p>
+<p>info@nacculture.org</p>
+<p>www.nacculture.org</p>
+
+<br>
+
+<p>
+© 2026 North America Chinese Culture Foundation. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+</html>
