@@ -444,6 +444,8 @@ cultural heritage, donation, volunteer, and community programs.
 </div>
 </div>
 
+<div id="additional-gallery-items" style="display:contents;"></div>
+  
 </div>
 
 <div class="gallery-actions">
@@ -492,6 +494,29 @@ aria-label="Close image"
 </footer>
 
 <script>
+
+  const additionalGallery = document.getElementById("additional-gallery-items");
+
+for(let i = 1; i <= 27; i++){
+const number = String(i).padStart(2,"0");
+const filename = `gallery-${number}.jpg`;
+
+additionalGallery.insertAdjacentHTML("beforeend",`
+<div class="gallery-card" onclick="openLightbox('${filename}')">
+<img
+src="${filename}"
+alt="NACCF Activity Photo ${number}"
+loading="lazy"
+>
+
+<div class="gallery-caption">
+<h3>Activity Photo ${number}</h3>
+<p>基金会精彩活动</p>
+</div>
+</div>
+`);
+}
+  
 function openLightbox(imageSource){
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightbox-image");
